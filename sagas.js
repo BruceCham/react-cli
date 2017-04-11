@@ -7,6 +7,8 @@ import { put } from 'redux-saga/effects'
 // Our worker Saga: 将异步执行 increment 任务
 export function* incrementAsync() {
   yield delay(1000)
+
+  // put相当于封装后的dispatch函数
   yield put({ type: 'INCREMENT' })
 }
 
