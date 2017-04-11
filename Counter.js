@@ -2,7 +2,7 @@
 import React, { Component, PropTypes } from 'react'
 
 const Counter = (state) =>{
-  let {value, onIncrement, onDecrement, onIncrementAsync} = state
+  let {value, onIncrement, onDecrement, onIncrementAsync, onIncrementAsyncOnce} = state
   return (<div>
             <button onClick={onIncrement}>
               Increment
@@ -14,6 +14,10 @@ const Counter = (state) =>{
             {' '}
             <button onClick={onIncrementAsync}>
               IncrementAsync
+            </button>
+            {' '}
+            <button onClick={onIncrementAsyncOnce}>
+              IncrementAsyncOnce
             </button>
             <hr />
             <div>
