@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Route,
   hashHistory,
   browserHistory,
@@ -11,12 +11,12 @@ import counterContainer from '../containers/counterContainer'
 import App from '../components/app'
 
 const routes = (
-  <Router history={hashHistory} basename='#'>
+  <BrowserRouter history={hashHistory} basename='#'>
     <App>
       <Route path="/counter" component={counterContainer}>
       </Route>
     </App>
-  </Router>
+  </BrowserRouter>
   )
 
 export default routes
