@@ -1,0 +1,13 @@
+import { combineReducers } from 'redux'
+import counter from './counter'
+/*
+  直接引用counter作为reducer时候
+    state = 0
+  通过合并combineReducers函数处理后，以函数名包括一层
+    state = {
+      counter: 0
+    }
+*/
+export default combineReducers({
+    counter
+})

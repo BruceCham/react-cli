@@ -26,6 +26,22 @@ function* helloSaga(){
   console.log('hello saga')
 }
 
+// // 模拟fetch请求
+// function fetchProductsApi() {
+//   return fetch('/products')
+//     .then(response => {response})
+//     .catch(error => {error})
+// }
+
+// function* fetchProducts() {
+//   const { response, error } = yield call(fetchProductsApi)
+//   if(response)
+//     yield put({ type: 'PRODUCTS_RECEIVED', products: response })
+//   else
+//     yield put({ type: 'PRODUCTS_REQUEST_FAILED', error })
+// }
+// // end
+
 export default function * rootSaga () {
   yield [
     helloSaga(),
