@@ -7,9 +7,8 @@ import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 
 import rootSaga from './sagas'
-import Counter from './Counter'
+import Counter from './components/Counter/counter'
 import reducer from './reducers/index'
-// import reducer from './reducers'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
