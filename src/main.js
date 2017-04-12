@@ -5,10 +5,14 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
+import {
+  BrowserRouter as Router,
+  hashHistory
+} from 'react-router-dom'
 
 import rootSaga from './sagas'
-import Counter from './components/Counter/counter'
 import reducer from './reducers/index'
+import routes from './routers/index'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
@@ -17,20 +21,14 @@ const store = createStore(
 )
 sagaMiddleware.run( rootSaga )
 
-
-const action = type => store.dispatch({type})
-console.log( store.getState() )
 function render() {
   ReactDOM.render(
-      <Counter
-      value={store.getState().counter}
-      onIncrement={() => action('INCREMENT')}
-      onDecrement={() => action('DECREMENT')} 
-      onIncrementAsync={()=> action('INCREMENT_ASYNC')}
-      onIncrementAsyncOnce={()=> action('INCREMENT_ASYNC_ONCE')}/>,
+    <Provider store={store}>
+      <Router history={hashHistory} routes={routes} />
+    </Provider>,
     document.getElementById('root')
   )
 }
 
 render()
-store.subscribe(render)
+// store.subscribe(render)
