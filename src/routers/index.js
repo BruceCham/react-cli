@@ -7,15 +7,15 @@ import {
   Redirect
 } from 'react-router-dom'
 
-import counterContainer from '../containers/counterContainer'
-import App from '../components/app'
+import CounterContainer from '../containers/counterContainer'
+import AppContainer from '../containers/appContainer'
 
 const routes = (
   <BrowserRouter history={hashHistory} basename='#'>
-    <App>
-      <Route path="/counter" component={counterContainer}>
+    <AppContainer>
+      <Route path="/counter" component={CounterContainer}>
       </Route>
-    </App>
+    </AppContainer>
   </BrowserRouter>
   )
 
