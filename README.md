@@ -12,7 +12,7 @@ git clone https://github.com/redux-saga/redux-saga-beginner-tutorial.git
 
 cd redux-saga-beginner-tutorial
 
-npm install
+yarn
 ```
 
 Run the demo
