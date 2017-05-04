@@ -1,11 +1,17 @@
 /node_modules/
+
 # Logs
 logs
+
+# yarn.lock
+yarn.lock
+
 *.log
 npm-debug.log*
 
 # Runtime data
 pids
+
 *.pid
 *.seed
 
