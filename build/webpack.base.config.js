@@ -21,15 +21,13 @@ module.exports = {
     // 框架 / 类库 分离打包
     // ================================
     vendor: [
-      'history',
-      'lodash',
       'react',
       'react-dom',
       'react-redux',
       'react-router',
-      'react-router-redux',
+      'react-router-dom',
       'redux',
-      'redux-thunk'
+      'redux-saga'
     ]
   },
   output: {
@@ -62,21 +60,7 @@ module.exports = {
     loaders: [{
       test: /\.(js|jsx)$/,
       loaders: (function() {
-        var _loaders = ['babel?' + JSON.stringify({
-          cacheDirectory: true,
-          plugins: [
-            'transform-runtime',
-            'transform-decorators-legacy'
-          ],
-          presets: ['es2015', 'react', 'stage-0'],
-          env: {
-            production: {
-              presets: ['react-optimize']
-            }
-          }
-        }), 'eslint'];
-
-        // 开发环境下引入 React Hot Loader
+        var _loaders = ['babel'];
         if (env === 'development') {
           _loaders.unshift('react-hot');
         }

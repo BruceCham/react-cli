@@ -8,9 +8,9 @@ Setup
 
 ```
 // clone the repo
-git clone https://github.com/redux-saga/redux-saga-beginner-tutorial.git
+git clone https://github.com/brucecham/redux-saga.git
 
-cd redux-saga-beginner-tutorial
+cd redux-saga
 
 yarn
 ```
@@ -18,11 +18,29 @@ yarn
 Run the demo
 
 ```
-npm start
+yarn start
+```
+
+build the demo
+
+```
+yarn build
 ```
 
 Run tests
 
 ```
-npm test
+yarn test
+```
+
+update package.json
+
+```
+ncu -a
+```
+
+静态服务器
+
+```
+sts 8080
 ```

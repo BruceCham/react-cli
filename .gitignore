@@ -8,7 +8,7 @@ yarn.lock
 
 *.log
 npm-debug.log*
-
+dist
 # Runtime data
 pids
 
