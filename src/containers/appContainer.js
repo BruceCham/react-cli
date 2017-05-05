@@ -1,25 +1,25 @@
-import React,{Component} from 'react'
+import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
 import App from '../components/app'
-class AppContainer extends Component{
-  render(){
+class AppContainer extends Component {
+  render () {
     return (
-      <App {...this.props}/>
-      )
+      <App {...this.props} />
+    )
   }
 }
 
-const mapStateToProps = (state)=>{
+const mapStateToProps = (state) => {
   return {
-    
+
   }
 }
 
-const mapDispatchToProps = (dispatch)=>{
+const mapDispatchToProps = (dispatch) => {
   return {
-    
+
   }
 }
 
-export default withRouter(connect(mapStateToProps,mapDispatchToProps)(AppContainer))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AppContainer))

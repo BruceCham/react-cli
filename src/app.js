@@ -13,11 +13,11 @@ const store = createStore(
   reducer,
   applyMiddleware(sagaMiddleware)
 )
-sagaMiddleware.run( rootSaga )
+sagaMiddleware.run(rootSaga)
 
 ReactDOM.render(
-    <Provider store={store}>
-      {routers}
-    </Provider>,
+  <Provider store={store}>
+    {routers}
+  </Provider>,
     document.getElementById('root')
   )

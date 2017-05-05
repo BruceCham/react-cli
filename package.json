@@ -4,14 +4,31 @@
   "description": "Redux Saga beginner tutorial",
   "main": "src/main.js",
   "scripts": {
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "lint": "standard",
     "test": "babel-node ./saga/sagas.spec.js | tap-spec",
     "start": "cross-env NODE_ENV=development node build/dev.js",
     "build": "cross-env NODE_ENV=production node build/prod.js"
   },
-  "pre-commit": [
+  "precommit": [
+    "precommit-msg",
     "lint"
   ],
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
+  "standard": {
+    "ignore": [
+      "node_modules",
+      "dist",
+      "build"
+    ],
+    "globals": [
+      "__DEV__",
+      "fetch"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brucecham/redux-saga.git"
