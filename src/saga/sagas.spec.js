@@ -2,7 +2,7 @@ import test from 'tape'
 import { put, call, delay } from 'redux-saga/effects'
 
 import { incrementAsync } from './index'
-
+let x = 1
 test('incrementAsync Saga test', (assert) => {
   const gen = incrementAsync()
 
