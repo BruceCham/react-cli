@@ -6,6 +6,18 @@ var webpack = require('webpack'),
   ExtractTextPlugin = require('extract-text-webpack-plugin'),
   SOURCE_MAP = false;
 
+
+var path = require('path')
+var rootPath = path.resolve(__dirname, '..'), // 项目根目录
+  src = path.join(rootPath, 'src'), // 开发源码目录
+var commonPath = {
+  rootPath: rootPath,
+  dist: path.join(rootPath, 'dist'), // build 后输出目录
+  indexHTML: path.join(src, 'index.html'), // 入口基页
+  staticDir: path.join(rootPath, 'static') // 无需处理的静态资源目录
+};
+
+
 config.output.filename = '[name].[chunkhash:6].js';
 config.output.chunkFilename = '[id].[chunkhash:6].js';
 
@@ -25,12 +37,12 @@ config.module.loaders.push({
 
 config.plugins.push(
   new CleanWebpackPlugin('dist', {
-    root: config.commonPath.rootPath,
+    root: commonPath.rootPath,
     verbose: false
   }),
   new CopyWebpackPlugin([ // 复制高度静态资源
     {
-      context: config.commonPath.staticDir,
+      context: commonPath.staticDir,
       from: '**/*',
       ignore: ['*.md']
     }
@@ -55,7 +67,7 @@ config.plugins.push(
   }),
   new HtmlWebpackPlugin({
     filename: '../index.html',
-    template: config.commonPath.indexHTML,
+    template: commonPath.indexHTML,
     chunksSortMode: 'none'
   })
 );

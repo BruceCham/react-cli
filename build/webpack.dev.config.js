@@ -6,6 +6,18 @@ var webpack = require('webpack'),
   // SOURCE_MAP = true; // 大多数情况下用不到
   SOURCE_MAP = false;
 
+var path = require('path')
+var rootPath = path.resolve(__dirname, '..'), // 项目根目录
+  src = path.join(rootPath, 'src'); // 开发源码目录
+var commonPath = {
+  rootPath: rootPath,
+  dist: path.join(rootPath, 'dist'), // build 后输出目录
+  indexHTML: path.join(src, 'index.html'), // 入口基页
+  staticDir: path.join(rootPath, 'static') // 无需处理的静态资源目录
+};
+
+
+
 config.output.filename = '[name].js';
 config.output.chunkFilename = '[id].js';
 
@@ -24,23 +36,23 @@ config.output.publicPath = '/';
 // 开发环境下直接内嵌 CSS 以支持热替换
 config.module.loaders.push({
   test: /\.css$/,
-  loader: 'style!css'
+  loader: 'style-loader!css-loader'
 }, {
   test: /\.less$/,
-  loader: 'style!css!less'
+  loader: 'style-loader!css-loader!less-loader'
 }, {
   test: /\.scss$/,
-  loader: 'style!css!sass'
+  loader: 'style-loader!css-loader!sass-loader'
 });
 
 config.plugins.push(
   new webpack.optimize.OccurrenceOrderPlugin(),
   new webpack.HotModuleReplacementPlugin(),
-  new webpack.NoErrorsPlugin(),
+  new webpack.NoEmitOnErrorsPlugin(),
   new ExtractTextPlugin('[name].css'),
   new HtmlWebpackPlugin({
     filename: 'index.html',
-    template: config.commonPath.indexHTML,
+    template: commonPath.indexHTML,
     chunksSortMode: 'none'
   }),
   new BrowserSyncPlugin({

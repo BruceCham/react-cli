@@ -13,7 +13,6 @@ var commonPath = {
 };
 
 module.exports = {
-  commonPath: commonPath,
   entry: {
     app: path.join(src, 'app.js'),
 
@@ -35,7 +34,10 @@ module.exports = {
     publicPath: '/static/'
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx'],
+    modules: [
+      'node_modules'
+    ],
     alias: {
       // ================================
       // 自定义路径别名
@@ -53,16 +55,13 @@ module.exports = {
       VIEW: path.join(src, 'views')
     }
   },
-  resolveLoader: {
-    root: path.join(rootPath, 'node_modules')
-  },
   module: {
     loaders: [{
       test: /\.(js|jsx)$/,
       loaders: (function() {
-        var _loaders = ['babel'];
+        var _loaders = ['babel-loader'];
         if (env === 'development') {
-          _loaders.unshift('react-hot');
+          _loaders.unshift('react-hot-loader');
         }
         return _loaders;
       })(),
@@ -70,13 +69,13 @@ module.exports = {
       exclude: /node_modules/
     }, {
       test: /\.json$/,
-      loader: 'json'
+      loader: 'json-loader'
     }, {
       test: /\.html$/,
-      loader: 'html'
+      loader: 'html-loader'
     }, {
       test: /\.(png|jpe?g|gif|svg)$/,
-      loader: 'url',
+      loader: 'url-loader',
       query: {
         limit: 10240, // 10KB 以下使用 base64
         name: 'img/[name]-[hash:6].[ext]'
@@ -85,9 +84,6 @@ module.exports = {
       test: /\.(woff2?|eot|ttf|otf)$/,
       loader: 'url-loader?limit=10240&name=fonts/[name]-[hash:6].[ext]'
     }]
-  },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
   },
   plugins: [
     new NyanProgressPlugin(), // 进度条
