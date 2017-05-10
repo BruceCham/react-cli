@@ -1,5 +1,2 @@
-dist/**
-node_modules/**
-src/assets/**
-static/**
-src/**/*.spec.js
+build/*.js
+config/*.js

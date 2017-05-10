@@ -1,8 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import Counter from '../components/Counter'
+import Counter from '@/components/Counter'
 
-class counterContainer extends Component {
+import {
+  INCREMENT,
+  INCREMENT_IF_ODD,
+  DECREMENT,
+  INCREMENT_ASYNC,
+  INCREMENT_ASYNC_ONCE
+} from '@/const/actions'
+
+
+class counterContainer extends React.Component {
   render () {
     return (<Counter {...this.props} />)
   }
@@ -18,24 +27,24 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onIncrement () {
       dispatch({
-        type: 'INCREMENT'
+        type: INCREMENT
       })
     },
     onDecrement () {
       dispatch({
-        type: 'DECREMENT'
+        type: DECREMENT
       })
     },
     onIncrementAsync () {
       console.log('onIncrementAsync 延时1秒增加')
       dispatch({
-        type: 'INCREMENT_ASYNC'
+        type: INCREMENT_ASYNC
       })
     },
     onIncrementAsyncOnce () {
       console.log('onIncrementAsyncOnce 同时多次触发仅执行最后一次')
       dispatch({
-        type: 'INCREMENT_ASYNC_ONCE'
+        type: INCREMENT_ASYNC_ONCE
       })
     }
   }

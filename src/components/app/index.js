@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Link, NavLink } from 'react-router-dom'
-
+import './index.css'
 class App extends Component {
   render () {
     return (
@@ -13,7 +13,6 @@ class App extends Component {
           {' '}
           <Link to='/other'>开发中</Link>
         </div>
-        <br />
         <br />
         {this.props.children}
       </div>

@@ -5,8 +5,8 @@ import {
   hashHistory
 } from 'react-router-dom'
 
-import CounterContainer from '../containers/counterContainer'
-import AppContainer from '../containers/appContainer'
+import CounterContainer from '@/containers/counterContainer'
+import AppContainer from '@/containers/appContainer'
 
 const routes = (
   <BrowserRouter history={hashHistory} basename='#'>

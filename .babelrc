@@ -1,17 +1,19 @@
 {
   "presets": [
+    ["env", { "modules": false }],
     "es2015",
     "react",
     "stage-2"
   ],
-  "plugins": [
-    "transform-runtime",
-    "transform-decorators-legacy"
-  ],
+  "plugins": ["transform-runtime"],
   "comments": false,
   "env": {
-    production: {
-      presets: ['react-optimize']
+    "test": {
+      "presets": ["env", "stage-2"],
+      "plugins": [ "istanbul" ]
+    },
+    "production": {
+      "presets": ["react-optimize"]
     }
   }
 }
