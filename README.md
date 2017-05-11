@@ -47,45 +47,32 @@
 ├── .postcssrc.js       # postcss配置项，vue-cli产出
 ├── package.json        # 很重要的东西了
 ```
-### Instructions
-
-Setup
-
+## <a name="reference">&sect; 操作</a>
+项目下载
 ```
-// clone the repo
-git clone https://github.com/brucecham/redux-saga.git
-
-cd redux-saga
-
-yarn
+git clone https://github.com/brucecham/react-cli.git
+cd redux-saga && yarn
 ```
-
-Run the demo
-
+启动开发环境
 ```
 yarn start
 ```
-
-build the demo
-
+构建生产环境代码
 ```
 yarn build
 ```
-
-Run tests
-
+运行测试代码
 ```
 yarn test
 ```
-
-update package.json
-
+## <a name="reference">&sect; package版本更新</a>
+> 可使用[ncu](https://www.npmjs.com/package/npm-check-updates)
 ```
 ncu -a
 ```
-
-静态服务器
-
+## <a name="reference">&sect; 启动静态服务器</a>
+> [sts启动静态服务器](https://www.npmjs.com/package/sts)
 ```
-sts 8080
+yarn build
+cd dist && sts 8090
 ```
