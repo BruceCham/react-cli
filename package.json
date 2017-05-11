@@ -1,7 +1,7 @@
 {
-  "name": "mytest",
+  "name": "react-cli",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "react project based on vue-cli",
   "author": "brucecham <brucecham@qq.com>",
   "private": true,
   "scripts": {
