@@ -12,10 +12,14 @@
 * ES6 + Babel
 ***
 
-## <a name="features">&sect;  构建开发环境</a>基于[vue-cli](https://github.com/vuejs/vue-cli)构建修改
-### git commit时，precommit功能
-### [redux-saga中文站点](http://leonshi.com/redux-saga-in-chinese/docs/introduction/BeginnerTutorial.html)
-Companion Repo for [Redux/Redux-saga beginner tutorial](https://github.com/redux-saga/redux-saga/blob/master/docs/introduction/BeginnerTutorial.md)
+## <a name="features">&sect;  构建开发环境</a>
+> 基于[vue-cli](https://github.com/vuejs/vue-cli)构建修改
+
+## <a name="features">&sect;  precommit</a>
+> 基于[standard](https://github.com/feross/standard)
+## <a name="reference">&sect; 参考资料</a>
+* [redux-saga中文站点](http://leonshi.com/redux-saga-in-chinese/docs/introduction/BeginnerTutorial.html)
+* [react-redux](https://github.com/vue-china/react-redux-starter-kit)
 
 ### Instructions
 
