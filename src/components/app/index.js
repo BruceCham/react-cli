@@ -4,7 +4,7 @@ import './index.css'
 class App extends Component {
   render () {
     return (
-      <div>
+      <div className="app-p-box">
         <h1>React Router Saga</h1>
         <div>
           <Link to='/'>首页</Link>

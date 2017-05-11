@@ -4908,6 +4908,17 @@ react-dom@^15.5.4:
     object-assign "^4.1.0"
     prop-types "~15.5.7"
 
+react-hot-api@^0.4.5:
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/react-hot-api/-/react-hot-api-0.4.7.tgz#a7e22a56d252e11abd9366b61264cf4492c58171"
+
+react-hot-loader@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-1.3.1.tgz#c95647ae78b73dfceff6ec71ffcb04182ff6daf9"
+  dependencies:
+    react-hot-api "^0.4.5"
+    source-map "^0.4.4"
+
 react-redux@^5.0.4:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.4.tgz#1563babadcfb2672f57f9ceaa439fb16bf85d55b"
