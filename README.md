@@ -1,4 +1,10 @@
 # React实战骨架
+<div align="center">
+  <a href="https://github.com/webpack/webpack">
+    <img width="200" height="200"
+      src="https://webpack.js.org/assets/icon-square-big.svg">
+  </a>
+</div> 
 
 ## <a name="features">&sect; 技术栈</a>
 > 详情可参阅 `package.json`
