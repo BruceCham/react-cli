@@ -1,11 +1,11 @@
 # React实战骨架
 <div align="center">
   <a href="https://github.com/webpack/webpack">
-    <img width="200" height="200"
+    <img width="100" height="100"
       src="https://webpack.js.org/assets/icon-square-big.svg">
   </a>
   <a href="https://reacttraining.com/react-router/">
-    <img alt="react-router" src="https://reacttraining.com/react-router/android-chrome-144x144.png"  width="200">
+    <img alt="react-router" src="https://reacttraining.com/react-router/android-chrome-144x144.png"  width="100" height="100">
   </a>
 </div> 
 <div align="center">
@@ -15,7 +15,7 @@
 </div> 
 <div align="center">
   <a href='https://github.com/redux-saga/redux-saga'>
-    <img src='https://redux-saga.js.org/logo/0800/Redux-Saga-Logo-Landscape.png' alt='Redux Logo Landscape' width='400px'>
+    <img src='https://redux-saga.js.org/logo/0800/Redux-Saga-Logo-Landscape.png' alt='Redux Logo Landscape' width='600px'>
   </a>
 </div> 
 
