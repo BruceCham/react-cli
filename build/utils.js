@@ -32,6 +32,9 @@ exports.cssLoaders = function (options) {
         })
       })
     }
+    loaders.unshift({
+      loader: "style-loader"
+    })
     return loaders
   }
 
