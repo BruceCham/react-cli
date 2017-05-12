@@ -32,9 +32,6 @@ exports.cssLoaders = function (options) {
         })
       })
     }
-    loaders.unshift({
-      loader: "style-loader"
-    })
     return loaders
   }
 
@@ -49,16 +46,31 @@ exports.cssLoaders = function (options) {
     styl: generateLoaders('stylus')
   }
 }
-
+function devAndProLoaders(production, loader){
+  if( production ){
+    return ExtractTextPlugin.extract({
+      fallback:[{
+        loader: 'style-loader'
+      }],
+      use: loader
+    })
+  }else{
+    loader.unshift({
+      loader: "style-loader"
+    })
+    return loader
+  }
+}
 // Generate loaders for standalone style files (outside of .vue)
 exports.styleLoaders = function (options) {
   var output = []
   var loaders = exports.cssLoaders(options)
   for (var extension in loaders) {
-    var loader = loaders[extension]
+    var loader = loaders[extension]    
     output.push({
       test: new RegExp('\\.' + extension + '$'),
-      use: production?ExtractTextPlugin.extract(loader):loader
+      // use: ExtractTextPlugin.extract(loader)
+      use: devAndProLoaders( production, loader )
     })
   }
   return output
