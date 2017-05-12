@@ -15,6 +15,7 @@ exports.cssLoaders = function (options) {
   var cssLoader = {
     loader: 'css-loader',
     options: {
+      modules: true,
       minimize: process.env.NODE_ENV === 'production',
       sourceMap: options.sourceMap
     }
@@ -31,6 +32,7 @@ exports.cssLoaders = function (options) {
         })
       })
     }
+    return loaders
   }
 
   // https://vue-loader.vuejs.org/en/configurations/extract-css.html
@@ -53,7 +55,7 @@ exports.styleLoaders = function (options) {
     var loader = loaders[extension]
     output.push({
       test: new RegExp('\\.' + extension + '$'),
-      use: loader
+      use: ExtractTextPlugin.extract( loader )
     })
   }
   return output

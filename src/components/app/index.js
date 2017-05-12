@@ -1,10 +1,13 @@
 import React, {Component} from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import './index.css'
+import classNames from 'classnames/bind'
+import styles from './index.styl'
+let cx = classNames.bind(styles)
+
 class App extends Component {
   render () {
     return (
-      <div className="app-p-box">
+      <div className={cx("app-p-box")}>
         <h1>React Router Saga</h1>
         <div>
           <Link to='/'>首页</Link>
