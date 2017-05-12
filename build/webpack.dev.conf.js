@@ -25,7 +25,7 @@ module.exports = merge(baseWebpackConfig, {
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new ExtractTextPlugin("[name].css"),
+    // new ExtractTextPlugin("[name].css"),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',

@@ -1,9 +1,9 @@
 var path = require('path')
 var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-
+var production = process.env.NODE_ENV === 'production'
 exports.assetsPath = function (_path) {
-  var assetsSubDirectory = process.env.NODE_ENV === 'production'
+  var assetsSubDirectory = production
     ? config.build.assetsSubDirectory
     : config.dev.assetsSubDirectory
   return path.posix.join(assetsSubDirectory, _path)
@@ -16,7 +16,7 @@ exports.cssLoaders = function (options) {
     loader: 'css-loader',
     options: {
       modules: true,
-      minimize: process.env.NODE_ENV === 'production',
+      minimize: production,
       sourceMap: options.sourceMap
     }
   }
@@ -55,7 +55,7 @@ exports.styleLoaders = function (options) {
     var loader = loaders[extension]
     output.push({
       test: new RegExp('\\.' + extension + '$'),
-      use: ExtractTextPlugin.extract( loader )
+      use: production?ExtractTextPlugin.extract(loader):loader
     })
   }
   return output
