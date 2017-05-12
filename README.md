@@ -1,7 +1,7 @@
 # React实战骨架 
 <div align="center">
   <a href='https://facebook.github.io/react/'>
-    <img src='https://facebook.github.io/react/img/logo_small.png' alt='react Logo Landscape'>
+    <img src='http://nav.react-china.org/img/reactjs.png' alt='react Logo Landscape'>
   </a>
 </div> 
 <div align="center">
