@@ -44,7 +44,6 @@
 ## <a name="reference">&sect; 参考资料</a>
 * [redux-saga中文站点](http://leonshi.com/redux-saga-in-chinese/docs/introduction/BeginnerTutorial.html)
 * [react-redux](https://github.com/vue-china/react-redux-starter-kit)
-* [文档风格参考kenberkeley的项目，可惜很久不更新，太老了](https://github.com/kenberkeley/react-demo)
 
 ## <a name="architecture">&sect; 项目架构</a>
 ### <a name="tree">⊙ 目录结构</a>
