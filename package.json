@@ -11,7 +11,31 @@
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+    "lint": "standard",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+  },
+  "precommit": [
+    "precommit-msg",
+    "lint"
+  ],
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
+  "standard": {
+    "ignore": [
+      "node_modules",
+      "dist",
+      "build",
+      "test",
+      "static",
+      "src/**/*.spec.js"
+    ],
+    "globals": [
+      "$",
+      "fetch"
+    ]
   },
   "dependencies": {
     "classnames": "^2.2.5",

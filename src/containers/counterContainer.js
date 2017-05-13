@@ -4,12 +4,10 @@ import Counter from '@/components/Counter'
 
 import {
   INCREMENT,
-  INCREMENT_IF_ODD,
   DECREMENT,
   INCREMENT_ASYNC,
   INCREMENT_ASYNC_ONCE
 } from '@/const/actions'
-
 
 class counterContainer extends React.Component {
   render () {

@@ -2,8 +2,6 @@ import { delay, takeEvery, takeLatest } from 'redux-saga'
 import { put } from 'redux-saga/effects'
 import {
   INCREMENT,
-  INCREMENT_IF_ODD,
-  DECREMENT,
   INCREMENT_ASYNC,
   INCREMENT_ASYNC_ONCE
 } from '@/const/actions'
