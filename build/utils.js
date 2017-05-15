@@ -52,6 +52,7 @@ exports.styleLoaders = function (options) {
     var loaders = exports.cssLoaders(options);
     for (var extension in loaders) {
         var loader = loaders[extension];
+        console.log(extension, JSON.stringify(loader))
         output.push({
             test: new RegExp('\\.' + extension + '$'),
             loader: loader
