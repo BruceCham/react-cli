@@ -16,14 +16,14 @@ export function * incrementAsync () {
   yield put({ type: INCREMENT })
 }
 
-function * watchIncrementAsync () {
+function * watchIncrementAsyncSaga () {
   // 监听每一次，每次触发都会执行
-  yield * takeEvery(INCREMENT_ASYNC, incrementAsync)
+  yield takeEvery(INCREMENT_ASYNC, incrementAsync)
 }
 
-function * watchIncrementAsyncOnce () {
+function * watchIncrementAsyncOnceSaga () {
   // 同时触发多次时候，只执行最后一次最新的
-  yield * takeLatest(INCREMENT_ASYNC_ONCE, incrementAsync)
+  yield takeLatest(INCREMENT_ASYNC_ONCE, incrementAsync)
 }
 
 function * helloSaga () {
@@ -33,7 +33,7 @@ function * helloSaga () {
 export default function * rootSaga () {
   yield all([
     helloSaga(),
-    watchIncrementAsync(),
-    watchIncrementAsyncOnce()
+    watchIncrementAsyncSaga(),
+    watchIncrementAsyncOnceSaga()
   ])
 }
