@@ -2,12 +2,12 @@ import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom'
 import { connect } from 'react-redux'
 import App from '@/components/app'
-class AppContainer extends Component {
+class NoMatchContainer extends Component {
   render () {
     return (
-      <App {...this.props} />
+      <div>404!Not Found</div>
     )
   }
 }
 
-export default withRouter(connect()(AppContainer))
+export default withRouter(connect()(NoMatchContainer))

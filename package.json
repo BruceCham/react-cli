@@ -13,7 +13,7 @@
     "test": "npm run unit && npm run e2e",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "lint": "standard",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "lint": "eslint --ext .js src test/unit/specs test/e2e/specs"
   },
   "precommit": [
     "precommit-msg",

@@ -10,11 +10,11 @@ class App extends Component {
       <div className={cx('app-p-box')}>
         <h1>React Router Saga</h1>
         <div>
-          <Link to='/'>首页</Link>
+          <Link to='/home'>首页</Link>
           {' '}
           <NavLink to='/counter'>计数页面</NavLink>
           {' '}
-          <Link to='/other'>开发中</Link>
+          <Link to='/other'>Not Found</Link>
         </div>
         <br />
         {this.props.children}
