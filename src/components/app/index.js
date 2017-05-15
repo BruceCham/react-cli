@@ -12,7 +12,7 @@ class App extends Component {
         <div>
           <Link to='/home'>首页</Link>
           {' '}
-          <NavLink to='/counter'>计数页面</NavLink>
+          <NavLink to='/counter' activeClassName="selected" activeStyle={{color: 'red'}}>计数页面</NavLink>
           {' '}
           <Link to='/other'>Not Found</Link>
         </div>

@@ -11,7 +11,7 @@ import AppContainer from '@/containers/appContainer'
 import HomeContainer from '@/containers/homeContainer'
 import NoMatchContainer from '@/containers/noMatchContainer'
 const routes = (
-  <HashRouter>
+  <HashRouter basename='app'>
     <AppContainer>
       <Switch>
         <Route path='/counter' component={CounterContainer} />
