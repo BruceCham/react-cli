@@ -1,4 +1,5 @@
 # React实战骨架 
+> 持续更新中，保持依赖包版本最新 🇨🇳
 <div align="center">
   <a href='https://facebook.github.io/react/'>
     <img src='http://nav.react-china.org/img/reactjs.png' alt='react Logo Landscape' width="80">
