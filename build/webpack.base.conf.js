@@ -17,7 +17,11 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json','.styl'],
+    extensions: ['.js', '.jsx', '.json'],
+    modules: [
+      resolve('src'),
+      resolve('node_modules')
+    ],
     alias: {
       '@': resolve('src')
     }
