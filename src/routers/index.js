@@ -6,10 +6,10 @@ import {
   HashRouter
 } from 'react-router-dom'
 
-import CounterContainer from '@/containers/counterContainer'
-import AppContainer from '@/containers/appContainer'
-import HomeContainer from '@/containers/homeContainer'
-import NoMatchContainer from '@/containers/noMatchContainer'
+import CounterContainer from '@/containers/CounterContainer'
+import AppContainer from '@/containers/AppContainer'
+import HomeContainer from '@/containers/HomeContainer'
+import NoMatchContainer from '@/containers/NoMatchContainer'
 const routes = (
   <HashRouter basename='app'>
     <AppContainer>
