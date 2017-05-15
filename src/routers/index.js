@@ -4,7 +4,7 @@ import {
   Route,
   Redirect,
   Switch,
-  hashHistory
+  HashRouter
 } from 'react-router-dom'
 
 import CounterContainer from '@/containers/counterContainer'
@@ -12,7 +12,7 @@ import AppContainer from '@/containers/appContainer'
 import HomeContainer from '@/containers/homeContainer'
 import NoMatchContainer from '@/containers/noMatchContainer'
 const routes = (
-  <BrowserRouter history={hashHistory} basename='#'>
+  <HashRouter>
     <AppContainer>
       <Switch>
         <Route path='/counter' component={CounterContainer} />
@@ -21,7 +21,7 @@ const routes = (
         <Redirect to={{pathname: '/home'}}/>
       </Switch>
     </AppContainer>
-  </BrowserRouter>
+  </HashRouter>
   )
 
 export default routes
