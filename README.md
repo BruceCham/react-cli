@@ -38,7 +38,12 @@
 * pre-commit
 * axios 0.16.1
 * ES6 + Babel
-***
+*** 
+
+> ### 更新内容
+> 2017/05/16 增加`mock`数据，引用`axios`模块，并提取server请求  
+> 2017/05/15 更新redux-saga最新版本用法 更新react-router4最新版用法  
+> …………  
 
 ## <a name="features">&sect;  构建开发环境</a>
 > 基于[vue-cli](https://github.com/vuejs/vue-cli)构建修改
