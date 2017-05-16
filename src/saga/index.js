@@ -1,6 +1,6 @@
 import { delay } from 'redux-saga'
 import { put, takeEvery, takeLatest, all } from 'redux-saga/effects'
-import {fetch} from '@/utils'
+import * as API from '@/server'
 import {
   INCREMENT,
   INCREMENT_ASYNC,
@@ -15,9 +15,8 @@ export function * incrementAsync () {
   yield delay(1000)
   // put相当于封装后的dispatch函数
   yield put({ type: INCREMENT })
-
-  let goods = yield fetch('/api/goods?sceneId=123')
-  console.log( goods )
+  let Promise = yield API.getSceneInfo( 123 )
+  console.log( Promise )
 }
 
 function * watchIncrementAsyncSaga () {
