@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  BrowserRouter,
   Route,
   Redirect,
   Switch,
@@ -17,8 +18,8 @@ const routes = (
         <Route path='/counter' component={CounterContainer} />
         <Route path='/home' component={HomeContainer}/>
         <Route component={NoMatchContainer} />
-        <Redirect to={{pathname: '/home'}}/>
       </Switch>
+      <Redirect from='/' to='/home'/>
     </AppContainer>
   </HashRouter>
   )
