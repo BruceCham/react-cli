@@ -75,7 +75,7 @@
 项目下载
 ```
 git clone https://github.com/brucecham/react-cli.git
-cd redux-saga && yarn
+cd react-cli && yarn
 ```
 启动开发环境
 ```
