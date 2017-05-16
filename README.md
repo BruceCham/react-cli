@@ -67,7 +67,9 @@
 │   ├─ containers/      # 容器
 │   ├─ reducers/        # 函数因子
 │   ├─ routers/         # 路由
-│   ├─ saga/            # 路由视图基页（VIEW）
+│   ├─ saga/            # 路由视图基页（VIEW）
+│   ├─ server/          # 网络请求提取
+│   ├─ utils/           # 公用方法封装提取
 │   ├─ main.js          # 主入口文件
 ├── static/             # 放置无需经由 Webpack 处理的静态文件
 ├── test/               # vue-cli产出的测试目录，暂时没有处理，待更
