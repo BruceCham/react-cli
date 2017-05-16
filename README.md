@@ -34,8 +34,8 @@
 * React-router-dom 4.1.1 
 * Redux-saga 0.15.3
 * Webpack 2.3.3
-* standard + pre-commit
-* axios 0.16.1
+* Standard + pre-commit
+* Axios 0.16.1
 * ES6 + Babel
 *** 
 
