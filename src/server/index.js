@@ -1,4 +1,4 @@
-import {axios} from '@/utils'
+import {fetch, axios} from '@/utils'
 
 function getSceneInfo(id){
   return axios('/api/getSceneInfo', {
