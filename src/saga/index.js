@@ -15,8 +15,8 @@ export function * incrementAsync () {
   yield delay(1000)
   // put相当于封装后的dispatch函数
   yield put({ type: INCREMENT })
-  let Promise = yield API.getSceneInfo( 123 )
-  console.log( Promise )
+  let Promise = yield API.getSceneInfo(123)
+  console.log(Promise)
 }
 
 function * watchIncrementAsyncSaga () {

@@ -1,6 +1,6 @@
-import {fetch, axios} from '@/utils'
+import {axios} from '@/utils'
 
-function getSceneInfo(id){
+function getSceneInfo (id) {
   return axios('/api/getSceneInfo', {
     sceneId: id
   })

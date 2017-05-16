@@ -1,5 +1,5 @@
 export default function (url, options) {
-  options = Object.assign({},options,{credentials: "include"})
+  options = Object.assign({}, options, {credentials: 'include'})
   return fetch(url, options).then((response) => {
     let contentType = response.headers.get('content-type')
     if (contentType && contentType.indexOf('application/json') !== -1) {
