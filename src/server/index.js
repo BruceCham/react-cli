@@ -1,9 +1,10 @@
 import {axios} from '@/utils'
 
 function getSceneInfo (id) {
-  return axios('/api/getSceneInfo', {
+  let params = Object.assign({},{},{
     sceneId: id
   })
+  return axios('/api/getSceneInfo', params)
 }
 
 export {
