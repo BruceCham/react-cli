@@ -40,6 +40,7 @@
 *** 
 
 ## <a name="features">&sect; 更新内容</a>
+> 2017/05/22 对提取的server进行小的优化
 > 2017/05/16 增加`mock`数据，引用`axios`模块，并提取server请求  
 > 2017/05/15 更新redux-saga最新版本用法 更新react-router4最新版用法  
 > …………  
