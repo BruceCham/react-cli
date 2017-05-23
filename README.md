@@ -46,10 +46,10 @@
 > …………  
 
 ## <a name="features">&sect;  构建开发环境</a>
-> 基于[vue-cli](https://github.com/vuejs/vue-cli)构建修改
+> 基于 [vue-cli](https://github.com/vuejs/vue-cli) 构建修改
 
 ## <a name="features">&sect;  precommit</a>
-> 基于[standard](https://github.com/feross/standard)
+> 基于 [standard](https://github.com/feross/standard)
 ## <a name="reference">&sect; 参考资料</a>
 * [redux-saga中文站点](http://leonshi.com/redux-saga-in-chinese/docs/introduction/BeginnerTutorial.html)
 * [react-redux](https://github.com/vue-china/react-redux-starter-kit)
@@ -100,7 +100,7 @@ yarn build
 yarn test
 ```
 ## <a name="reference">&sect; package版本更新</a>
-> 可使用[ncu](https://www.npmjs.com/package/npm-check-updates)
+> 可使用 [ncu](https://www.npmjs.com/package/npm-check-updates)
 ```
 ncu -a
 ```
