@@ -1,0 +1,38 @@
+.counttimer {
+  display: none;
+}
+.counttimer__show{
+  display: block;
+}
+.counttimer__mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 10000;
+  text-indent: -999rem;
+  vertical-align: middle;
+}
+.counttimer__main {
+  width: 10.6rem;
+  height: 10.6rem;
+  line-height: 10.6rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: 5rem;
+  text-align: center;
+  z-index: 10001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%)
+}
