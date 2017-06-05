@@ -54,7 +54,7 @@ class CountTimer extends React.Component {
   componentWillUnmount () {
     this.clearIntervalTime()
   }
-  preveentHandle(evt){
+  preveentHandle (evt) {
     evt.stopPropagation()
     evt.preventDefault()
   }
