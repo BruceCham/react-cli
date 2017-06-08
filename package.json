@@ -37,7 +37,8 @@
       "$",
       "fetch",
       "@"
-    ]
+    ],
+    "parser": "babel-eslint"
   },
   "dependencies": {
     "axios": "^0.16.2",
