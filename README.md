@@ -127,5 +127,5 @@ class CountTimer extends Component {
 export default pureRender(CountTimer)
 ```
 <div align="center">
-  <img src='images/purcompare.jpeg' alt='性能优化后渲染对比' width='450'/>
+  <img src='images/purcompare.jpeg' alt='性能优化后渲染对比' width='650'/>
 </div>
