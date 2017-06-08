@@ -8,6 +8,8 @@ import {
   INCREMENT_ASYNC,
   INCREMENT_ASYNC_ONCE
 } from '@/const/actions'
+import {CT_SHOW_REQUEST} from '@/const/countTimer'
+
 
 class counterContainer extends React.Component {
   render () {
@@ -57,7 +59,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     onShowCountTimer () {
       dispatch({
-        type: 'CT_SHOW'
+        type: CT_SHOW_REQUEST
       })
     }
   }

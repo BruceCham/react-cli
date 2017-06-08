@@ -1,4 +1,4 @@
 import actions from './actions'
-
-const root = Object.assign({}, actions)
+import countTimer from './countTimer'
+const root = Object.assign({}, {...actions,...countTimer})
 export default root
