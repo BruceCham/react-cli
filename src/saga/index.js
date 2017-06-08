@@ -27,7 +27,7 @@ function * helloSaga () {
   console.log('hello saga')
 }
 
-function * setCountTimerShowRequest(){
+function * setCountTimerShowRequest () {
   yield put({
     type: CT_SHOW
   })
@@ -37,8 +37,8 @@ function * setCountTimerShowRequest(){
   })
 }
 
-function * setCountTimerShowRequestSaga(){
-  yield takeLatest( CT_SHOW_REQUEST, setCountTimerShowRequest)
+function * setCountTimerShowRequestSaga () {
+  yield takeLatest(CT_SHOW_REQUEST, setCountTimerShowRequest)
 }
 
 export default function * rootSaga () {

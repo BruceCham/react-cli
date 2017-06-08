@@ -10,7 +10,6 @@ import {
 } from '@/const/actions'
 import {CT_SHOW_REQUEST} from '@/const/countTimer'
 
-
 class counterContainer extends React.Component {
   render () {
     const {onIncrement, onDecrement, onIncrementAsync, onIncrementAsyncOnce} = this.props
