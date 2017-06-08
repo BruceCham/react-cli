@@ -113,7 +113,7 @@ ncu -a
 yarn build
 cd dist && sts 8090
 ```
-性能优化
+## <a name="modify">&sect; 性能优化</a>
 ```js
 import pureRender from "pure-render-decorator"
 /*
@@ -127,5 +127,5 @@ class CountTimer extends Component {
 export default pureRender(CountTimer)
 ```
 <div align="center">
-  <img src='images/purcompare.jpeg' alt='Redux Logo Landscape' />
+  <img src='images/purcompare.jpeg' alt='性能优化后渲染对比' width='450'/>
 </div>
