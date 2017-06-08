@@ -114,6 +114,7 @@ yarn build
 cd dist && sts 8090
 ```
 ## <a name="modify">&sect; 性能优化</a>
+### 1、引入 `pure-render-decorator` ，优化渲染判断(shouleComoonentUpdate)
 ```js
 import pureRender from "pure-render-decorator"
 /*
