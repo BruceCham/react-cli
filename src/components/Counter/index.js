@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import pureRender from 'pure-render-decorator'
 
-export default class Counter extends Component {
+@pureRender
+class Counter extends Component {
   constructor (props) {
     super(props)
     this.clickHandle = this.clickHandle.bind(this)
@@ -36,3 +38,5 @@ export default class Counter extends Component {
     )
   }
 }
+
+export default Counter
