@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import counter from './counter'
+import countTimer from './countTimer'
 /*
   直接引用counter作为reducer时候
     state = 0
@@ -9,5 +10,6 @@ import counter from './counter'
     }
 */
 export default combineReducers({
-  counter
+  counter,
+  countTimer
 })

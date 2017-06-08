@@ -40,6 +40,7 @@
 *** 
 
 ## <a name="features">&sect; 更新内容</a>  
+> 2017/06/08 增加倒计时组件 `CountTimer` ，引用 `pure-render-decorator`，提升渲染性能  
 > 2017/06/06 更新 `package` 依赖，据说 `Webpack3` 出来了，后面会更新……  
 > 2017/06/01 更新 `package` 依赖  
 > 2017/05/22 对提取的 `server` 进行小的优化  
@@ -112,3 +113,19 @@ ncu -a
 yarn build
 cd dist && sts 8090
 ```
+性能优化
+```js
+import pureRender from "pure-render-decorator"
+/*
+ * es7
+ * @pureRender
+ * class CountTimer extends Component {}
+*/
+class CountTimer extends Component {
+  ...
+}
+export default pureRender(CountTimer)
+```
+<div align="center">
+  <img src='images/purcompare.jpeg' alt='Redux Logo Landscape' />
+</div>

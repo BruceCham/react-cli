@@ -1,4 +1,5 @@
 import React from 'react'
+import pureRender from "pure-render-decorator"
 import classNames from 'classnames/bind'
 import styles from './index.css?l'
 
@@ -59,6 +60,7 @@ class CountTimer extends React.Component {
     evt.preventDefault()
   }
   render () {
+    console.log('render counttimer component')
     return (
       <div onClick={this.preveentHandle.bind(this)} className={cx('counttimer', this.state.show ? 'counttimer__show' : '')}>
         <div className={cx('counttimer__mask')} />
@@ -68,4 +70,4 @@ class CountTimer extends React.Component {
   }
 }
 
-export default CountTimer
+export default pureRender(CountTimer)

@@ -11,7 +11,8 @@ export default class Counter extends Component {
     onIncrement()
   }
   render () {
-    let { value, onDecrement, onIncrementAsync, onIncrementAsyncOnce } = this.props
+    console.log( 'render count component' )
+    let { counter, onDecrement, onIncrementAsync, onIncrementAsyncOnce } = this.props
     return (
       <div>
         <button onClick={this.clickHandle}>
@@ -30,7 +31,7 @@ export default class Counter extends Component {
               IncrementAsyncOnce
             </button>
         <hr />
-        <div>Clicked: {value}times</div>
+        <div>Clicked: {counter}times</div>
       </div>
     )
   }

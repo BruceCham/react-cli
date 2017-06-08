@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import Counter from '@/components/Counter'
-
+import CountTimer from '@/components/CountTimer'
 import {
   INCREMENT,
   DECREMENT,
@@ -11,13 +11,23 @@ import {
 
 class counterContainer extends React.Component {
   render () {
-    return (<Counter {...this.props} />)
+    const {onIncrement, onDecrement, onIncrementAsync, onIncrementAsyncOnce} = this.props
+    const {onShowCountTimer} = this.props
+    let {counter, countTimer} = this.props
+    return (
+      <div>
+         <Counter {...{onIncrement, onDecrement, onIncrementAsync, onIncrementAsyncOnce, counter}} />
+         <button onClick={onShowCountTimer}>点击显示</button>
+         <CountTimer show={countTimer.show}/>
+      </div>
+    )
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    value: state.counter
+    counter: state.counter,
+    countTimer: state.countTimer
   }
 }
 
@@ -43,6 +53,11 @@ const mapDispatchToProps = (dispatch) => {
       console.log('onIncrementAsyncOnce 同时多次触发仅执行最后一次')
       dispatch({
         type: INCREMENT_ASYNC_ONCE
+      })
+    },
+    onShowCountTimer () {
+      dispatch({
+        type: 'CT_SHOW'
       })
     }
   }
