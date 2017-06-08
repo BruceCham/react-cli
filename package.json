@@ -35,7 +35,8 @@
     ],
     "globals": [
       "$",
-      "fetch"
+      "fetch",
+      "@"
     ]
   },
   "dependencies": {
