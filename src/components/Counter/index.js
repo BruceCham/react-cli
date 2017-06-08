@@ -11,7 +11,7 @@ export default class Counter extends Component {
     onIncrement()
   }
   render () {
-    console.log( 'render count component' )
+    console.log('render count component')
     let { counter, onDecrement, onIncrementAsync, onIncrementAsyncOnce } = this.props
     return (
       <div>

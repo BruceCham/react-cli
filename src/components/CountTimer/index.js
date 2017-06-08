@@ -1,5 +1,5 @@
 import React from 'react'
-import pureRender from "pure-render-decorator"
+import pureRender from 'pure-render-decorator'
 import classNames from 'classnames/bind'
 import styles from './index.css?l'
 

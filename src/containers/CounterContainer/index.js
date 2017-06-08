@@ -16,9 +16,9 @@ class counterContainer extends React.Component {
     let {counter, countTimer} = this.props
     return (
       <div>
-         <Counter {...{onIncrement, onDecrement, onIncrementAsync, onIncrementAsyncOnce, counter}} />
-         <button onClick={onShowCountTimer}>点击显示</button>
-         <CountTimer show={countTimer.show}/>
+        <Counter {...{onIncrement, onDecrement, onIncrementAsync, onIncrementAsyncOnce, counter}} />
+        <button onClick={onShowCountTimer}>点击显示</button>
+        <CountTimer show={countTimer.show} />
       </div>
     )
   }
