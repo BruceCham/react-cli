@@ -117,15 +117,19 @@ cd dist && sts 8090
 ### 1、引入 `pure-render-decorator` ，优化渲染判断(shouleComoonentUpdate)
 ```js
 import pureRender from "pure-render-decorator"
-/*
- * es7
- * @pureRender
- * class CountTimer extends Component {}
-*/
 class CountTimer extends Component {
   ...
 }
 export default pureRender(CountTimer)
+```
+或应用decorator装饰器语法 **推荐用法**
+```js
+import pureRender from "pure-render-decorator"
+@pureRender
+class CountTimer extends Component {
+  ...
+}
+export default CountTimer
 ```
 <div align="center">
   <img src='images/purcompare.jpeg' alt='性能优化后渲染对比' width='650'/>
