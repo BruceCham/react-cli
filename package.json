@@ -13,6 +13,7 @@
     "test": "npm run unit && npm run e2e",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
     "lint": "standard",
+    "fix": "standard --fix",
     "eslint": "eslint --ext .js src test/unit/specs test/e2e/specs"
   },
   "precommit": [
