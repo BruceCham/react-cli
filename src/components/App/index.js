@@ -8,7 +8,7 @@ class App extends Component {
   render () {
     return (
       <div className={cx('app-p-box')}>
-        <h1>React Router Saga</h1>
+        <h1>React Router Saga :)</h1>
         <div>
           <Link to='/home' replace>首页</Link>
           {' '}
