@@ -33,13 +33,14 @@
 * React-redux 5.0.4
 * React-router-dom 4.1.1 
 * Redux-saga 0.15.3
-* Webpack 2.3.3
+* Webpack 3.0.0
 * Standard + pre-commit
 * Axios 0.16.1
 * ES6 + Babel
 *** 
 
 ## <a name="features">&sect; 更新内容</a>  
+> 2017/06/22 更新 `webpack 3.0`，增加 `scope hoisting`  
 > 2017/06/08 增加倒计时组件 `CountTimer` ；引用 `pure-render-decorator`，提升渲染性能；增加装饰器 decorator  
 > 2017/06/06 更新 `package` 依赖，据说 `Webpack3` 出来了，后面会更新……  
 > 2017/06/01 更新 `package` 依赖  
