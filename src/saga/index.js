@@ -11,8 +11,12 @@ import {CT_SHOW, CT_HIDE, CT_SHOW_REQUEST} from '@/const/countTimer'
 export function * incrementAsync () {
   yield delay(1000)
   yield put({ type: INCREMENT })
-  let Promise = yield API.getSceneInfo(123)
-  console.log(Promise)
+  try {
+    let Promise = yield API.getSceneInfo(123)
+    console.log(Promise)
+  } catch (e) {
+    console.log(e)
+  }
 }
 
 function * watchIncrementAsyncSaga () {
