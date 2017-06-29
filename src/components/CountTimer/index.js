@@ -5,7 +5,6 @@ import styles from './index.css'
 
 let cx = classNames.bind(styles)
 
-@pureRender
 class CountTimer extends React.Component {
   constructor (props) {
     super(props)
@@ -71,4 +70,4 @@ class CountTimer extends React.Component {
   }
 }
 
-export default CountTimer
+export default pureRender(CountTimer)
