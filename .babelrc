@@ -8,10 +8,7 @@
     ],
     // webpack understands the native import syntax, and uses it for tree shaking
     [
-      "es2017",
-      {
-        "modules": false
-      }
+      "es2017"
     ],
     // Transpile React components to JavaScript
     "react",
