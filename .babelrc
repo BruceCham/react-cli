@@ -1,30 +1,44 @@
 {
   "presets": [
-    ["env", { "modules": false }],
-
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
     // webpack understands the native import syntax, and uses it for tree shaking
-    ["es2015",{"modules": false}],
-    
+    [
+      "es2017",
+      {
+        "modules": false
+      }
+    ],
     // Transpile React components to JavaScript
     "react",
-    
     "stage-2"
   ],
   "plugins": [
     "transform-runtime",
     // es7 装饰器
-   "transform-decorators-legacy", 
+    "transform-decorators-legacy",
     // Enables React code to work with HMR.
     "react-hot-loader/babel"
   ],
   "comments": false,
   "env": {
     "test": {
-      "presets": ["env", "stage-2"],
-      "plugins": [ "istanbul" ]
+      "presets": [
+        "env",
+        "stage-2"
+      ],
+      "plugins": [
+        "istanbul"
+      ]
     },
     "production": {
-      "presets": ["react-optimize"]
+      "presets": [
+        "react-optimize"
+      ]
     }
   }
 }

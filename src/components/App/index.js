@@ -14,6 +14,8 @@ class App extends Component {
           {' '}
           <NavLink to='/counter' replace activeClassName='selected' activeStyle={{color: 'red'}}>计数页面</NavLink>
           {' '}
+          <Link to='/form' replace>表单提交</Link>
+          {' '}
           <Link to='/other' replace>Not Found</Link>
         </div>
         <br />

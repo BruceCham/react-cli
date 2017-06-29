@@ -40,6 +40,10 @@
 *** 
 
 ## <a name="features">&sect; 更新内容</a>  
+> 2017/06/29 
+1. `webpack` 暂时回退 `2.6.1` 版本
+因为升级 `3.0` 后，样式文件变化时，浏览器只能自动刷新，而不是自动渲染不刷新
+2. 增加 `redux-form` 表单验证组件
 > 2017/06/26 更新 `package` 依赖  
 > 2017/06/22 更新 `webpack 3.0`，增加 `scope hoisting`  
 > 2017/06/08 增加倒计时组件 `CountTimer` ；引用 `pure-render-decorator`，提升渲染性能；增加装饰器 decorator  
