@@ -47,7 +47,8 @@
 * redux-form 表单实例  
 * Axios 网络请求（内有 fetch，可自行切换）
 * Mock 数据API接口
-* ESlint `git` 提交时候，语法规则自动校验  
+* 热替换 样式文件变化，自动渲染不刷新；js文件变化，刷新浏览器
+* ESlint `git` 提交时候，语法规则自动校验  
 
 ## <a name="features">&sect; 更新内容</a>  
 > 2017/06/30 修复 `git commit` 提交时候，校验 `es7 decorator` 不通过问题  
