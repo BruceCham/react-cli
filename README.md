@@ -49,6 +49,7 @@
 * Mock 数据API接口
 * 热替换 样式文件变化，自动渲染不刷新；js文件变化，刷新浏览器
 * ESlint `git` 提交时候，语法规则自动校验  
+***
 
 ## <a name="features">&sect; 更新内容</a>  
 > 2017/06/30 修复 `git commit` 提交时候，校验 `es7 decorator` 不通过问题  
@@ -65,6 +66,7 @@
 > 2017/05/16 增加 `mock` 数据，引用 `axios` 模块，并提取 `server` 请求  
 > 2017/05/15 更新 `redux-saga` 最新版本用法 更新 `react-router4` 最新版用法  
 > …………  
+***
 
 ## <a name="features">&sect;  构建开发环境</a>
 > 基于 [vue-cli](https://github.com/vuejs/vue-cli) 构建修改
