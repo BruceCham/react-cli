@@ -34,10 +34,20 @@
 * React-router-dom 4.1.1 
 * Redux-saga 0.15.4
 * Webpack 3.0.0
-* Standard + pre-commit
+* Babel-ESlint + Pre-ommit
 * Axios 0.16.2
 * ES6 + Babel
 *** 
+
+## <a>&sect; 功能点</a>
+
+* React、Redux 全家桶
+* React-router 路由
+* Redux-saga 实用工具
+* redux-form 表单实例  
+* Axios 网络请求（内有 fetch，可自行切换）
+* Mock 数据API接口
+* ESlint `git` 提交时候，语法规则自动校验  
 
 ## <a name="features">&sect; 更新内容</a>  
 > 2017/06/30 修复 `git commit` 提交时候，校验 `es7 decorator` 不通过问题  
@@ -59,7 +69,20 @@
 > 基于 [vue-cli](https://github.com/vuejs/vue-cli) 构建修改
 
 ## <a name="features">&sect;  precommit</a>
-> 基于 [standard](https://github.com/feross/standard)
+> 基于 `babel-eslint` 语法校验  
+
+自动校验
+```js
+git commit -m '提交信息'
+```  
+手动启动校验  
+```
+npm run eslint
+```
+手动修复不符合规则代码
+```
+npm run fix
+```
 ## <a name="reference">&sect; 参考资料</a>
 * [redux-saga中文站点](http://leonshi.com/redux-saga-in-chinese/docs/introduction/BeginnerTutorial.html)
 * [react-redux](https://github.com/vue-china/react-redux-starter-kit)
