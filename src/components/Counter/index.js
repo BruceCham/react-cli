@@ -18,19 +18,19 @@ class Counter extends Component {
       <div>
         <button onClick={this.clickHandle}>
               Increment
-            </button>
+        </button>
         {' '}
         <button onClick={onDecrement}>
               Decrement
-            </button>
+        </button>
         {' '}
         <button onClick={onIncrementAsync}>
               IncrementAsync
-            </button>
+        </button>
         {' '}
         <button onClick={onIncrementAsyncOnce}>
               IncrementAsyncOnce
-            </button>
+        </button>
         <hr />
         <div>Clicked: {counter}times</div>
       </div>

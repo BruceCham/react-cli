@@ -19,5 +19,5 @@ ReactDOM.render(
   <Provider store={store}>
     {routers}
   </Provider>,
-    document.getElementById('app')
+  document.getElementById('app')
 )

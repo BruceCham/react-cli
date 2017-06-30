@@ -23,6 +23,6 @@ const routes = (
       <Redirect from='/' to='/home' />
     </AppContainer>
   </HashRouter>
-  )
+)
 
 export default routes
