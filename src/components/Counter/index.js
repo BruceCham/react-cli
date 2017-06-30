@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import pureRender from 'pure-render-decorator'
 
+@pureRender
 class Counter extends Component {
   constructor (props) {
     super(props)
@@ -38,4 +39,4 @@ class Counter extends Component {
   }
 }
 
-export default pureRender(Counter)
+export default Counter
