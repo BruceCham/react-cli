@@ -11,11 +11,13 @@ exports.assetsPath = function (_path) {
 
 exports.cssLoaders = function (options) {
   options = options || {}
-
+  let prod = process.env.NODE_ENV === 'production'
   var cssLoader = {
     loader: 'css-loader',
     options: {
-      minimize: process.env.NODE_ENV === 'production',
+      modules: prod,
+      localIdentName: '[local]--[hash:base64:8]',
+      minimize: prod,
       sourceMap: options.sourceMap
     }
   }

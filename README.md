@@ -52,17 +52,12 @@
 ***
 
 ## <a name="features">&sect; 更新内容</a>  
+> 2017/07/04 升级 `package`，并在生产环境增加 `css modules`  
 > 2017/06/30 升级 `webpack 3.0`，解决了样式文件热替换问题  
 > 2017/06/30 修复 `git commit` 提交时候，校验 `es7 decorator` 不通过问题  
-> 2017/06/29 
-1. `webpack` 暂时回退 `2.6.1` 版本
-因为升级 `3.0` 后，样式文件变化时，浏览器只能自动刷新，而不是自动渲染不刷新
-2. 增加 `redux-form` 表单验证组件
-> 2017/06/26 更新 `package` 依赖  
+> 2017/06/29 增加 `redux-form` 表单验证组件  
 > 2017/06/22 更新 `webpack 3.0`，增加 `scope hoisting`  
 > 2017/06/08 增加倒计时组件 `CountTimer` ；引用 `pure-render-decorator`，提升渲染性能；增加装饰器 decorator  
-> 2017/06/06 更新 `package` 依赖，据说 `Webpack3` 出来了，后面会更新……  
-> 2017/06/01 更新 `package` 依赖  
 > 2017/05/22 对提取的 `server` 进行小的优化  
 > 2017/05/16 增加 `mock` 数据，引用 `axios` 模块，并提取 `server` 请求  
 > 2017/05/15 更新 `redux-saga` 最新版本用法 更新 `react-router4` 最新版用法  
