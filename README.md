@@ -52,6 +52,7 @@
 ***
 
 ## <a name="features">&sect; 更新内容</a>  
+> 2017/07/06 增加 `antd` 按需加载打包  
 > 2017/07/04 升级 `package`，并在生产环境增加 `css modules`  
 > 2017/06/30 升级 `webpack 3.0`，解决了样式文件热替换问题  
 > 2017/06/30 修复 `git commit` 提交时候，校验 `es7 decorator` 不通过问题  

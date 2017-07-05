@@ -19,7 +19,14 @@
     // es7 装饰器
     "transform-decorators-legacy",
     // Enables React code to work with HMR.
-    "react-hot-loader/babel"
+    "react-hot-loader/babel",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ]
   ],
   "comments": false,
   "env": {
