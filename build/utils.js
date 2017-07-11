@@ -15,7 +15,8 @@ exports.cssLoaders = function (options) {
   var cssLoader = {
     loader: 'css-loader',
     options: {
-      modules: prod,
+      modules: true,// 开启 css modules 功能
+      importLoaders: 1,
       localIdentName: '[local]--[hash:base64:8]',
       minimize: prod,
       sourceMap: options.sourceMap

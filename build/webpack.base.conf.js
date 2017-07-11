@@ -30,7 +30,11 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        loader: 'babel-loader',
+        loader: [
+          'babel-loader',
+          // 解决 css-modules 模式下 hmr 不生效的问题 Good
+          'webpack-module-hot-accept'
+        ],
         include: [resolve('src'), resolve('test')]
       },
       {
