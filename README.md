@@ -41,7 +41,7 @@
 *** 
 
 ## <a>&sect; 功能点</a>
-> 待增加功能：动态路由  
+> 已实现    
 
 * React、Redux 全家桶
 * React-router-dom 路由
@@ -52,6 +52,8 @@
 * Css Modules 避免样式重名  
 * Hmr 热替换  
 * ESlint `git` 提交时候，语法规则自动校验  
+* 动态路由  
+
 ***
 
 ## <a name="features">&sect; 更新内容</a>  
