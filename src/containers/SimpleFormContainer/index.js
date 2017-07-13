@@ -9,4 +9,3 @@ const AsyncSimpleForm = () => (
 )
 
 export default AsyncSimpleForm
-
