@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   Route,
-  Redirect,
   Switch,
   HashRouter
 } from 'react-router-dom'
@@ -15,12 +14,11 @@ const routes = (
   <HashRouter>
     <AppContainer>
       <Switch>
+        <Route exact path="/" component={HomeContainer} />
         <Route path='/counter' component={CounterContainer} />
-        <Route path='/home' component={HomeContainer} />
         <Route path='/form' component={FormContainer} />
         <Route component={NoMatchContainer} />
       </Switch>
-      <Redirect from='/' to='/home' />
     </AppContainer>
   </HashRouter>
 )
