@@ -33,9 +33,13 @@ acorn@^4.0.3:
   version "4.0.13"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
-acorn@^5.0.0, acorn@^5.0.1, acorn@^5.0.3:
+acorn@^5.0.0, acorn@^5.0.1:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.0.3.tgz#c460df08491463f028ccb82eab3730bf01087b3d"
+
+acorn@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.1.1.tgz#53fe161111f912ab999ee887a90a0bc52822fd75"
 
 after@0.8.2:
   version "0.8.2"
@@ -1328,7 +1332,7 @@ check-error@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/check-error/-/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
 
-chokidar@^1.4.1, chokidar@^1.4.3:
+chokidar@^1.4.1, chokidar@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.7.0.tgz#798e689778151c8076b4b360e5edd28cda2bb468"
   dependencies:
@@ -2333,9 +2337,9 @@ eslint-plugin-babel@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-babel/-/eslint-plugin-babel-4.1.1.tgz#ef285c87039b67beb3bbd227f5b0eed4fb376b87"
 
-eslint-plugin-html@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-3.1.0.tgz#2eb999b48840b7184edf1c953976a73307151e44"
+eslint-plugin-html@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-3.1.1.tgz#d6c03796e89ac6b735da6fef9ca9162b423daee3"
   dependencies:
     htmlparser2 "^3.8.2"
 
@@ -2354,9 +2358,9 @@ eslint-plugin-import@^2.7.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
-eslint-plugin-node@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-5.1.0.tgz#bc8cdb85180d0b4d946a2531640e2a4dd7a4e6d4"
+eslint-plugin-node@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-node/-/eslint-plugin-node-5.1.1.tgz#a7ed956e780c22aef6afd1116005acd82f26eac6"
   dependencies:
     ignore "^3.3.3"
     minimatch "^3.0.4"
@@ -4104,6 +4108,10 @@ lolex@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/lolex/-/lolex-1.6.0.tgz#3a9a0283452a47d7439e72731b9e07d7386e49f6"
 
+lolex@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/lolex/-/lolex-2.1.1.tgz#1ceeb4dcc7bd8bf1e735bf822023d1b680add662"
+
 longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
@@ -5687,9 +5695,9 @@ react-redux@^5.0.5:
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
 
-react-router-dom@^4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.1.1.tgz#3021ade1f2c160af97cf94e25594c5f294583025"
+react-router-dom@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.1.2.tgz#7f8a7ca868d32acadd19ca09543b40d26df8ec37"
   dependencies:
     history "^4.5.1"
     loose-envify "^1.3.1"
@@ -5847,9 +5855,9 @@ reduce-function-call@^1.0.1, reduce-function-call@^1.0.2:
   dependencies:
     balanced-match "^0.4.2"
 
-redux-form@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/redux-form/-/redux-form-7.0.0.tgz#6ef9eb72c1df1ee676139d74b5e7503f9ce0f0cb"
+redux-form@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/redux-form/-/redux-form-7.0.1.tgz#2754a4fbd343b90ae336e3f3637d060127429e92"
   dependencies:
     deep-equal "^1.0.1"
     es6-error "^4.0.0"
@@ -6226,13 +6234,13 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-sinon-chai@^2.11.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/sinon-chai/-/sinon-chai-2.11.0.tgz#93d90f989fff67ce45767077ffe575dde1faea6d"
+sinon-chai@^2.12.0:
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/sinon-chai/-/sinon-chai-2.12.0.tgz#da71e9642ef7b893ba3cf2af806396a00aa45927"
 
-sinon@^2.3.7:
-  version "2.3.7"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-2.3.7.tgz#1451614a2eaab05bb4d876c1335cd40132ec5127"
+sinon@^2.3.8:
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-2.3.8.tgz#31de06fed8fba3a671e576dd96d0a5863796f25c"
   dependencies:
     diff "^3.1.0"
     formatio "1.2.0"
@@ -6909,19 +6917,19 @@ warning@^3.0.0:
   dependencies:
     loose-envify "^1.0.0"
 
-watchpack@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.3.1.tgz#7d8693907b28ce6013e7f3610aa2a1acf07dad87"
+watchpack@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.4.0.tgz#4a1472bcbb952bd0a9bb4036801f954dfb39faac"
   dependencies:
     async "^2.1.2"
-    chokidar "^1.4.3"
+    chokidar "^1.7.0"
     graceful-fs "^4.1.2"
 
-webpack-bundle-analyzer@^2.8.2:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.8.2.tgz#8b6240c29a9d63bc72f09d920fb050adbcce9fe8"
+webpack-bundle-analyzer@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-2.8.3.tgz#8e7b3deb3832698c24b09c84dfe5b43902a83991"
   dependencies:
-    acorn "^5.0.3"
+    acorn "^5.1.1"
     chalk "^1.1.3"
     commander "^2.9.0"
     ejs "^2.5.6"
@@ -6975,9 +6983,9 @@ webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.5.3"
 
-webpack@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.2.0.tgz#8b0cae0e1a9fd76bfbf0eab61a8c2ada848c312f"
+webpack@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.3.0.tgz#ce2f9e076566aba91f74887133a883fd7da187bc"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
@@ -6998,7 +7006,7 @@ webpack@^3.2.0:
     supports-color "^3.1.0"
     tapable "~0.2.5"
     uglifyjs-webpack-plugin "^0.4.6"
-    watchpack "^1.3.1"
+    watchpack "^1.4.0"
     webpack-sources "^1.0.1"
     yargs "^6.0.0"
 
