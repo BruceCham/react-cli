@@ -1,5 +1,5 @@
 # React实战骨架 
-> 2017/07/17 已更新！  
+> 2017/07/28 已更新！  
 > 持续更新中，保持依赖包版本最新 🇨🇳
 <div align="center">
   <a href='https://facebook.github.io/react/'>
@@ -33,8 +33,8 @@
 * Redux 3.7.2
 * React-redux 5.0.5
 * React-router-dom 4.1.2 
-* Redux-saga 0.15.4
-* Webpack 3.3.0
+* Redux-saga 0.15.6
+* Webpack 3.4.1
 * Babel-ESlint + Pre-ommit
 * Axios 0.16.2
 * ES6 + Babel
@@ -49,7 +49,7 @@
 * redux-form 表单实例  
 * Axios 网络请求（内有 fetch，可自行切换）
 * Mock 数据API接口
-* Css Modules 避免样式重名  
+* Css Modules 避免样式重名(config.js设置默认 false 建议团队规范化)  
 * Hmr 热替换  
 * ESlint `git` 提交时候，语法规则自动校验  
 * 动态路由  
