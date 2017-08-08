@@ -17,7 +17,7 @@ module.exports = {
     productionGzipExtensions: ['js', 'css'],
 
     // 是否开启 css Module
-    cssModules: true,
+    cssModules: false,
     // Run the build command with an extra argument to
     // View the bundle analyzer report after build finishes:
     // `npm run build --report`

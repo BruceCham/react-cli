@@ -33,7 +33,7 @@ class Counter extends Component {
               IncrementAsyncOnce
         </button>
         <hr />
-        <div>Clicked: {counter}times</div>
+        <div>Clicked: <span style={{fontSize: '20px', color: 'red'}}> {counter} </span>times</div>
       </div>
     )
   }
