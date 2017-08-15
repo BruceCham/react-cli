@@ -4,8 +4,9 @@ import { connect } from 'react-redux'
 import App from '@/components/App'
 class AppContainer extends Component {
   render () {
+    const {children} = this.props
     return (
-      <App {...this.props} />
+      <App children={children} />
     )
   }
 }

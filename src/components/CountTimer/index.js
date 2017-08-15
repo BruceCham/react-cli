@@ -13,6 +13,7 @@ class CountTimer extends React.Component {
       show: false,
       time: 5
     }
+    this.preveentHandle = this.preveentHandle.bind(this)
   }
   setIntervalTime () {
     let self = this
@@ -63,7 +64,7 @@ class CountTimer extends React.Component {
   render () {
     console.log('render counttimer component')
     return (
-      <div onClick={this.preveentHandle.bind(this)} className={cx('counttimer', this.state.show ? 'counttimer__show' : '')}>
+      <div onClick={this.preveentHandle} className={cx('counttimer', this.state.show ? 'counttimer__show' : '')}>
         <div className={cx('counttimer__mask')} />
         <div className={cx('counttimer__main')}>{this.state.time}</div>
       </div>

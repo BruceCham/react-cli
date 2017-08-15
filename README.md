@@ -1,5 +1,5 @@
 # React实战骨架 
-> 2017/08/08 已更新！  
+> 2017/08/15 已更新！  
 > 持续更新中，保持依赖包版本最新 🇨🇳
 <div align="center">
   <a href='https://facebook.github.io/react/'>
@@ -31,10 +31,10 @@
 
 * React 15.6.1
 * Redux 3.7.2
-* React-redux 5.0.5
+* React-redux 5.0.6
 * React-router-dom 4.1.2 
 * Redux-saga 0.15.6
-* Webpack 3.5.0
+* Webpack 3.5.4
 * Babel-ESlint + Pre-ommit
 * Axios 0.16.2
 * ES6 + Babel
