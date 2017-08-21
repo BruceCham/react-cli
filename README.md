@@ -1,5 +1,5 @@
 # React实战骨架 
-> 2017/08/15 已更新！  
+> 2017/08/21 已更新！  
 > 持续更新中，保持依赖包版本最新 🇨🇳
 <div align="center">
   <a href='https://facebook.github.io/react/'>
@@ -34,7 +34,7 @@
 * React-redux 5.0.6
 * React-router-dom 4.1.2 
 * Redux-saga 0.15.6
-* Webpack 3.5.4
+* Webpack 3.5.5
 * Babel-ESlint + Pre-ommit
 * Axios 0.16.2
 * ES6 + Babel
@@ -57,6 +57,7 @@
 ***
 
 ## <a name="features">&sect; 更新内容</a>  
+> 2017/08/21 去掉 `babel-presets-stag-2`，统一为 `babel-presets-env` 
 > 2017/07/13 增加动态路由功能，用法见 `SimpleFormContainer`  
 > 2017/07/11 增加 `css modules` 模式，并完善模式下的 `hmr` 热替换  
 > 2017/07/06 增加 `antd` 按需加载打包配置(.babelrc)  

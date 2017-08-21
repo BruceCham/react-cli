@@ -1,18 +1,12 @@
 {
   "presets": [
-    [
-      "env",
-      {
-        "modules": false
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "safari >= 7"]
       }
-    ],
-    // webpack understands the native import syntax, and uses it for tree shaking
-    [
-      "es2017"
-    ],
+    }],
     // Transpile React components to JavaScript
-    "react",
-    "stage-2"
+    "react"
   ],
   "plugins": [
     "transform-runtime",
@@ -33,8 +27,7 @@
   "env": {
     "test": {
       "presets": [
-        "env",
-        "stage-2"
+        "env"
       ],
       "plugins": [
         "istanbul"
