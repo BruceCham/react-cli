@@ -26,6 +26,8 @@
   </a>
 </div> 
 
+<br>
+
 ## <a name="features">&sect; 技术栈</a>
 > 详情可参阅 `package.json`
 
@@ -39,6 +41,8 @@
 * Axios 0.16.2
 * ES6 + Babel
 *** 
+
+<br>
 
 ## <a>&sect; 功能点</a>
 > 已实现    
@@ -56,6 +60,8 @@
 
 ***
 
+<br>
+
 ## <a name="features">&sect; 更新内容</a>  
 > 2017/08/21 去掉 `babel-presets-stag-2`，统一为 `babel-presets-env`  
 > 2017/07/13 增加动态路由功能，用法见 `SimpleFormContainer`  
@@ -72,8 +78,12 @@
 > …………  
 ***
 
+<br>
+
 ## <a name="features">&sect;  构建开发环境</a>
 > 基于 [vue-cli](https://github.com/vuejs/vue-cli) 构建修改
+
+<br>
 
 ## <a name="features">&sect;  precommit</a>
 > 基于 `babel-eslint` 语法校验  
@@ -90,9 +100,14 @@ npm run eslint
 ```
 npm run fix
 ```
+
+<br>
+
 ## <a name="reference">&sect; 参考资料</a>
 * [redux-saga中文站点](http://leonshi.com/redux-saga-in-chinese/docs/introduction/BeginnerTutorial.html)
 * [react-redux](https://github.com/vue-china/react-redux-starter-kit)
+
+<br>
 
 ## <a name="architecture">&sect; 项目架构</a>
 ### <a name="tree">⊙ 目录结构</a>
@@ -121,6 +136,9 @@ npm run fix
 ├── .postcssrc.js       # postcss配置项，vue-cli产出
 ├── package.json        # 很重要的东西了
 ```
+
+<br>
+
 ## <a name="reference">&sect; 操作</a>
 项目下载
 ```
@@ -139,11 +157,17 @@ yarn build
 ```
 yarn test
 ```
+
+<br>
+
 ## <a name="reference">&sect; package版本更新</a>
 > 可使用 [ncu](https://www.npmjs.com/package/npm-check-updates)
 ```
 ncu -a
 ```
+
+<br>
+
 ## <a name="reference">&sect; 启动静态服务器</a>
 > [sts启动静态服务器](https://www.npmjs.com/package/sts)
 ```
@@ -151,7 +175,9 @@ yarn build
 cd dist && sts 8090
 ```
 
-## 书写建议/性能优化 
+<br>
+
+## <a name="features">&sect; 书写建议/性能优化</a> 
 
 ### 尽量减少 dom 层级 
 Icon 或empty 等状态显示，可以放在 before 或 after 上，500个『2层DIV』与500个『1层DIV』作对比，在安卓很烂的浏览器上，会相差几百毫秒。 
