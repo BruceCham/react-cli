@@ -2,7 +2,8 @@ import React from 'react'
 import {
   Route,
   Switch,
-  HashRouter
+  // BrowserRouter as Router,
+  HashRouter as Router
 } from 'react-router-dom'
 
 import CounterContainer from '@/containers/CounterContainer'
@@ -11,7 +12,7 @@ import HomeContainer from '@/containers/HomeContainer'
 import NoMatchContainer from '@/containers/NoMatchContainer'
 import FormContainer from '@/containers/SimpleFormContainer'
 const routes = (
-  <HashRouter>
+  <Router>
     <AppContainer>
       <Switch>
         <Route exact path="/" component={HomeContainer} />
@@ -20,7 +21,7 @@ const routes = (
         <Route component={NoMatchContainer} />
       </Switch>
     </AppContainer>
-  </HashRouter>
+  </Router>
 )
 
 export default routes
