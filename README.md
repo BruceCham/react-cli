@@ -1,5 +1,5 @@
 # React实战骨架 
-> 2017/09/08 已更新！  
+> 2017/09/19 已更新！  
 > 持续更新中，保持依赖包版本最新 🇨🇳
 <div align="center">
   <a href='https://facebook.github.io/react/'>
@@ -34,7 +34,7 @@
 * React-redux 5.0.6
 * React-router-dom 4.2.2 
 * Redux-saga 0.15.6
-* Webpack 3.5.6
+* Webpack 3.6.0
 * Babel-ESlint + Pre-ommit
 * Axios 0.16.2
 * ES6 + Babel
@@ -150,8 +150,26 @@ ncu -a
 yarn build
 cd dist && sts 8090
 ```
-## <a name="modify">&sect; 性能优化</a>
-### 1、引入 `pure-render-decorator` ，优化渲染判断(shouleComoonentUpdate)
+
+## 书写建议/性能优化 
+
+### 尽量减少 dom 层级 
+Icon 或empty 等状态显示，可以放在 before 或 after 上，500个『2层DIV』与500个『1层DIV』作对比，在安卓很烂的浏览器上，会相差几百毫秒。 
+
+```html
+<!-- 劣 -->
+<div class="video-card">
+    <div class="video-empty"></div>
+<div>
+
+<!-- 优 -->
+<div class="video-card video-empty">
+<div>
+``` 
+
+### shouldUpdate，只有组件更新时才会重新渲染 
+1. 引入 `pure-render-decorator` ，优化渲染判断(shouleComoonentUpdate)
+
 ```js
 import pureRender from "pure-render-decorator"
 class CountTimer extends Component {
@@ -159,7 +177,9 @@ class CountTimer extends Component {
 }
 export default pureRender(CountTimer)
 ```
-或应用decorator装饰器语法 **推荐用法**
+
+2. decorator装饰器语法 **推荐用法** 
+
 ```js
 import pureRender from "pure-render-decorator"
 @pureRender
@@ -170,4 +190,32 @@ export default CountTimer
 ```
 <div align="center">
   <img src='images/purcompare.jpeg' alt='性能优化后渲染对比' width='650'/>
-</div>
+</div> 
+
+### 传参及赋值，减少解构 
+
+```html
+<!-- 劣 -->
+<div {...videoData}></div>
+
+<!-- 优 -->
+<div data={videoData}></div>
+```
+
+### 循环语句 
+
+1. 纯循环，用forEach，不要用map，map会返回一个数组，性能并不快 
+2. 双层循环，涉及到查找的，不要用二维数组，可以用对象来快速定位，并用Object.keys()取到key进行循环 
+3. try {} catch (e) {} 退出forEach循环 
+
+```js
+try {
+ this.contentTmpList.forEach((item, index) => {
+    if (index > 1) {
+        throw new Error('')
+    }
+ })
+} catch (e) {}
+```
+
+
