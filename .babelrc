@@ -3,7 +3,8 @@
     ["env", {
       "targets": {
         "browsers": ["last 2 versions", "safari >= 7"]
-      }
+      },
+      "modules": false
     }],
     // Transpile React components to JavaScript
     "react"

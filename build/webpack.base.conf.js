@@ -8,7 +8,7 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/entry.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -33,11 +33,6 @@ module.exports = {
           let _loader = [
             'babel-loader'
           ]
-          // 开发环境，解决 css-modules 中 hmr 不生效的问题 Good
-          // 'webpack-module-hot-accept'
-          if( !isProd && config.dev.cssModules ){
-            _loader.push( 'webpack-module-hot-accept' )
-          }
           return _loader
         })(),
         include: [resolve('src'), resolve('test')]
