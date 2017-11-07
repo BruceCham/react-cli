@@ -63,8 +63,8 @@
 <br>
 
 ## <a name="features">&sect; 更新内容</a>  
-> 2017/11/07 增加 `css module` 功能 
-> 2017/11/06 增加 `dev-server` 下热替换功能——『Hmr』 
+> 2017/11/07 增加 `css module` 功能  
+> 2017/11/06 增加 `dev-server` 下热替换功能——『Hmr』  
 > 2017/08/21 去掉 `babel-presets-stag-2`，统一为 `babel-presets-env`  
 > 2017/07/13 增加动态路由功能，用法见 `SimpleFormContainer`  
 > 2017/07/06 增加 `antd` 按需加载打包配置(.babelrc)  
