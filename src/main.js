@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
@@ -8,11 +9,17 @@ import reducer from '@/reducers'
 import routers from '@/routers'
 
 const sagaMiddleware = createSagaMiddleware()
-const store = createStore(reducer, applyMiddleware(sagaMiddleware))
+const store = createStore(
+  reducer,
+  applyMiddleware(sagaMiddleware)
+)
 sagaMiddleware.run(rootSaga)
 
-const App = () => {
-  return <Provider store={store}>{routers}</Provider>
-}
+ReactDOM.render(
+  <Provider store={store}>
+    {routers}
+  </Provider>,
+  document.getElementById('app')
+)
 
-export default App
+if (module.hot) module.hot.accept()

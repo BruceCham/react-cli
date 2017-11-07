@@ -10,7 +10,7 @@ let path = require('path')
 let express = require('express')
 let webpack = require('webpack')
 let proxyMiddleware = require('http-proxy-middleware')
-let webpackConfig = process.env.NODE_ENV === 'testing'
+let webpackConfig = (process.env.NODE_ENV === 'testing' || process.env.NODE_ENV === 'production')
   ? require('./webpack.prod.conf')
   : require('./webpack.dev.conf')
 
