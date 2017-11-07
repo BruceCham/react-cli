@@ -132,7 +132,7 @@ npm run fix
 ├── .babelrc            # Babel 转码配置
 ├── .eslintignore       # ESLint 检查中需忽略的文件（夹）
 ├── .eslintrc           # ESLint 配置
-├── .gitignore          # git忽悠提交
+├── .gitignore          # git忽略提交
 ├── .postcssrc.js       # postcss配置项，vue-cli产出
 ├── package.json        # 很重要的东西了
 ```
