@@ -29,12 +29,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        loader: (function(){
-          let _loader = [
-            'babel-loader'
-          ]
-          return _loader
-        })(),
+        loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]
       },
       {
@@ -46,8 +41,12 @@ module.exports = {
         }
       },
       {
-        test: /\.json$/,
-        loader: 'json-loader'
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: utils.assetsPath('media/[name].[hash:7].[ext]')
+        }
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -56,6 +55,10 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   }

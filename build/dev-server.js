@@ -10,9 +10,7 @@ let path = require('path')
 let express = require('express')
 let webpack = require('webpack')
 let proxyMiddleware = require('http-proxy-middleware')
-let webpackConfig = (process.env.NODE_ENV === 'testing' || process.env.NODE_ENV === 'production')
-  ? require('./webpack.prod.conf')
-  : require('./webpack.dev.conf')
+let webpackConfig = require('./webpack.dev.conf')
 
 // 启动mock数据
 let mock = require('./mock')
@@ -35,7 +33,8 @@ let devMiddleware = require('webpack-dev-middleware')(compiler, {
 })
 
 let hotMiddleware = require('webpack-hot-middleware')(compiler, {
-  log: () => {}
+  log: false,
+  heartbeat: 2000
 })
 // force page reload when html-webpack-plugin template changes
 // compiler.plugin('compilation', function (compilation) {
@@ -72,24 +71,36 @@ app.use(hotMiddleware)
 let staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 
-let uri = 'http://localhost:' + port
+const uri = 'http://localhost:' + port
 
-let _resolve
-let readyPromise = new Promise(resolve => {
+var _resolve
+var _reject
+var readyPromise = new Promise((resolve, reject) => {
   _resolve = resolve
+  _reject = reject
 })
+
+var server
+var portfinder = require('portfinder')
+portfinder.basePort = port
 
 console.log('> Starting dev server...')
 devMiddleware.waitUntilValid(() => {
-  console.log('> Listening at ' + uri + '\n')
-  // when env is testing, don't need open it
-  if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
-    opn(uri)
-  }
-  _resolve()
+  portfinder.getPort((err, port) => {
+    if (err) {
+      _reject(err)
+    }
+    process.env.PORT = port
+    var uri = 'http://localhost:' + port
+    console.log('> Listening at ' + uri + '\n')
+    // when env is testing, don't need open it
+    if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
+      opn(uri)
+    }
+    server = app.listen(port)
+    _resolve()
+  })
 })
-
-let server = app.listen(port)
 
 module.exports = {
   ready: readyPromise,
