@@ -64,20 +64,33 @@
 <br>
 
 ## <a name="features">&sect; 更新内容</a>  
-> 2017/11/10 对依赖模块拆分打包，解决单个 `trunk` 文件过大问题  
-> 2017/11/07 增加 `css module` 功能  
-> 2017/11/06 增加 `dev-server` 下热替换功能——『Hmr』  
-> 2017/08/21 去掉 `babel-presets-stag-2`，统一为 `babel-presets-env`  
-> 2017/07/13 增加动态路由功能，用法见 `SimpleFormContainer`  
-> 2017/07/06 增加 `antd` 按需加载打包配置(.babelrc)  
-> 2017/06/30 修复 `git commit` 提交时候，校验 `es7 decorator` 不通过问题  
-> 2017/06/29 增加 `redux-form` 表单验证组件  
-> 2017/06/22 升级 `webpack 3.0`，增加 `scope hoisting`  
-> 2017/06/08 引用 `pure-render-decorator`，提升渲染性能；增加装饰器 decorator  
-> 2017/05/22 对提取的 `server` 进行小的优化  
-> 2017/05/16 增加 `mock` 数据，引用 `axios` 模块，并提取 `server` 请求  
-> 2017/05/15 更新 `redux-saga` 最新版本用法 更新 `react-router4` 最新版用法  
-> …………  
+- 2017/11/10 
+  - 对依赖模块拆分打包，解决单个 `trunk` 文件过大问题  
+- 2017/11/07 
+  - 增加 `css module` 功能  
+- 2017/11/06 
+  - 增加 `dev-server` 下热替换功能——『Hmr』  
+- 2017/08/21 
+  - 去掉 `babel-presets-stag-2`，统一为 `babel-presets-env`  
+- 2017/07/13 
+  - 增加动态路由功能，用法见 `SimpleFormContainer`  
+- 2017/07/06 
+  - 增加 `antd` 按需加载打包配置(.babelrc)  
+- 2017/06/30 
+  - 修复 `git commit` 提交时候，校验 `es7 decorator` 不通过问题  
+- 2017/06/29 
+  - 增加 `redux-form` 表单验证组件  
+- 2017/06/22 
+  - 升级 `webpack 3.0`，增加 `scope hoisting`  
+- 2017/06/08 
+  - 引用 `pure-render-decorator`，提升渲染性能；增加装饰器 decorator  
+- 2017/05/22 
+  - 对提取的 `server` 进行小的优化  
+- 2017/05/16 
+  - 增加 `mock` 数据，引用 `axios` 模块，并提取 `server` 请求  
+- 2017/05/15 
+  - 更新 `redux-saga` 最新版本用法 更新 `react-router4` 最新版用法  
+  
 ***
 
 <br>
