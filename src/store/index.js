@@ -4,14 +4,14 @@ import createSagaMiddleware from 'redux-saga'
 import rootSaga from '@/saga'
 import reducer from '@/reducers/index'
 
-export default function configureStore(initialState) {
+export default function configureStore (initialState) {
   const sagaMiddleware = createSagaMiddleware()
   const store = createStore(
     reducer,
     initialState,
     applyMiddleware(sagaMiddleware)
   )
-  let sagaTask = sagaMiddleware.run(function * (){
+  let sagaTask = sagaMiddleware.run(function * () {
     yield rootSaga()
   })
   if (module.hot) {
