@@ -55,7 +55,7 @@
 * vendor-trunk 拆分打包  
 * Axios 网络请求（内有 fetch，可自行切换）
 * Mock 数据API接口
-* Css Modules 『config/index.js cssModule:true 默认开启 建议团队规范化命名』  
+* Css Modules `config/index.js cssModule:false` 默认关闭(建议团队规范化命名)  
 * ESlint `git` 提交时候，语法规则自动校验  
 * 动态路由  
 
@@ -142,8 +142,7 @@ npm run fix
 │   ├─ saga/            # 路由视图基页（VIEW）
 │   ├─ server/          # 网络请求提取
 │   ├─ utils/           # 公用方法封装提取
-│   ├─ app.js           # 主入口文件
-│   ├─ entry.js         # 热替换包装主入口文件
+│   ├─ entry.js         # 主入口文件
 ├── static/             # 放置无需经由 Webpack 处理的静态文件
 ├── test/               # vue-cli产出的测试目录，暂时没有处理，待更
 ├── index.html          # 静态模板页面，开发和build产出，都依赖它
