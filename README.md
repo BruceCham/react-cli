@@ -3,26 +3,17 @@
 > 持续更新中，保持依赖包版本最新 🇨🇳
 <div align="center">
   <a href='https://facebook.github.io/react/'>
-    <img src='http://nav.react-china.org/img/reactjs.png' alt='react Logo Landscape' width="80">
-  </a>
-</div> 
-<div align="center">
-  <a href="https://github.com/webpack/webpack">
-    <img width="100" height="100"
-      src="https://webpack.js.org/assets/icon-square-big.svg">
-  </a>
-  <a href="https://reacttraining.com/react-router/">
-    <img alt="react-router" src="https://reacttraining.com/react-router/android-chrome-144x144.png"  width="100" height="100">
+    <img src='./images/react.png' alt='react Logo Landscape' width='80'/>
   </a>
 </div> 
 <div align="center">
   <a href='http://redux.js.org'>
-    <img src='https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67' width="335">
+    <img src='./images/redux.png' width='250'/>
   </a>
 </div> 
 <div align="center">
   <a href='https://github.com/redux-saga/redux-saga'>
-    <img src='https://redux-saga.js.org/logo/0800/Redux-Saga-Logo-Landscape.png' alt='Redux Logo Landscape' height='100px'>
+    <img src='./images/redux-saga.png' alt='Redux Logo Landscape' width='400'/>
   </a>
 </div> 
 
@@ -228,7 +219,7 @@ class CountTimer extends Component {
 export default CountTimer
 ```
 <div align="center">
-  <img src='images/purcompare.jpeg' alt='性能优化后渲染对比' width='650'/>
+  <img src='images/purcompare.png' alt='性能优化后渲染对比' width='500'/>
 </div> 
 
 ### 传参及赋值，减少解构 
