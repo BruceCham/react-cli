@@ -10,7 +10,7 @@ module.exports = {
   entry: {
     reacts: ['react', 'react-dom', 'redux', 'react-redux', 'react-router-dom'],
     rutils: ['redux-saga', 'redux-form', 'axios', 'classnames/bind', 'pure-render-decorator'],
-    app: './src/main.js'
+    app: './src/entry.js'
   },
   output: {
     path: config.build.assetsRoot,

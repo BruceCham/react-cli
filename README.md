@@ -1,5 +1,5 @@
 # React实战骨架 
-> 2017/11/10 已更新！  
+> 2017/11/15 已更新！  
 > 持续更新中，保持依赖包版本最新 🇨🇳
 <div align="center">
   <a href='https://facebook.github.io/react/'>
@@ -64,6 +64,8 @@
 <br>
 
 ## <a name="features">&sect; 更新内容</a>  
+- 2017/11/15 
+  - 修复 `provider` 不支持 `热替换` 的问题  
 - 2017/11/10 
   - 对依赖模块拆分打包，解决单个 `trunk` 文件过大问题  
 - 2017/11/07 
@@ -140,7 +142,8 @@ npm run fix
 │   ├─ saga/            # 路由视图基页（VIEW）
 │   ├─ server/          # 网络请求提取
 │   ├─ utils/           # 公用方法封装提取
-│   ├─ main.js          # 主入口文件
+│   ├─ app.js           # 主入口文件
+│   ├─ entry.js         # 热替换包装主入口文件
 ├── static/             # 放置无需经由 Webpack 处理的静态文件
 ├── test/               # vue-cli产出的测试目录，暂时没有处理，待更
 ├── index.html          # 静态模板页面，开发和build产出，都依赖它
@@ -167,10 +170,6 @@ yarn start
 构建生产环境代码
 ```
 yarn build
-```
-运行测试代码
-```
-yarn test
 ```
 
 <br>

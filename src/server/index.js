@@ -1,14 +1,17 @@
-import {axios} from '@/utils'
+import { axios } from "@/utils"
 
-function getSceneInfo (id) {
+function getSceneInfo(id) {
   return axios({
-    url: '/api/getSceneInfo',
+    url: "/api/getSceneInfo",
     params: {
       sceneId: id
     }
-  })
+  }).then(res => {
+      return res
+    })
+    .catch( err => {
+      return err
+    })
 }
 
-export {
-  getSceneInfo
-}
+export { getSceneInfo }
