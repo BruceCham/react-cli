@@ -22,11 +22,11 @@
 ## <a name="features">&sect; 技术栈</a>
 > 详情可参阅 `package.json`
 
-* React 16.0.0
+* React 16.1.0
 * Redux 3.7.2
 * React-redux 5.0.6
 * React-router-dom 4.2.2 
-* Redux-saga 0.15.6
+* Redux-saga 0.16.0
 * Webpack 3.8.1
 * Babel-ESlint + Pre-ommit
 * Axios 0.17.0
