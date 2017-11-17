@@ -24,10 +24,7 @@ module.exports = merge(baseWebpackConfig, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env,
-      __DEV__: env === 'development',
-      __PROD__: env === 'production',
-      __COMPONENT_DEVTOOLS__: false, // 是否使用组件形式的 Redux DevTools
-      __WHY_DID_YOU_UPDATE__: false // 是否检测不必要的组件重渲染
+      __ENV__: JSON.stringify('dev')
     }),
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
     new webpack.HotModuleReplacementPlugin(),

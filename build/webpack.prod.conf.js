@@ -11,6 +11,10 @@ var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var NyanProgressPlugin = require('nyan-progress-webpack-plugin')
 var env = config.build.env
 
+// 增加各环境判断
+let envMatch = /^build:([a-z]+)$/.exec(process.env.npm_lifecycle_event)
+const __ENV__ = envMatch ? JSON.stringify(envMatch[1]):JSON.stringify('dev')
+
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -27,7 +31,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   plugins: [
     new NyanProgressPlugin(),
     new webpack.DefinePlugin({
-      'process.env': env
+      'process.env': env,
+      __ENV__
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {

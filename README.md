@@ -1,5 +1,5 @@
 # React实战骨架 
-> 2017/11/15 已更新！  
+> 2017/11/17 已更新！  
 > 持续更新中，保持依赖包版本最新 🇨🇳
 <div align="center">
   <a href='https://facebook.github.io/react/'>
@@ -55,6 +55,8 @@
 <br>
 
 ## <a name="features">&sect; 更新内容</a>  
+- 2017/11/17 
+  - 增加环境变量 `__ENV__`，方便配置环境参数。用法`npm run build:qa` 
 - 2017/11/15 
   - 修复 `provider` 不支持 `热替换` 的问题  
 - 2017/11/10 
