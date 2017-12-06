@@ -30,8 +30,12 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
-
+    proxyTable: {
+      "/weather": {
+        target: 'http://weixin.jirengu.com',
+        changeOrigin: true
+      }
+    },
     // 是否开启 css Module
     cssModules: false,
     // CSS Sourcemaps off by default because relative paths are "buggy"

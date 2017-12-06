@@ -55,7 +55,8 @@ Object.keys(proxyTable).forEach(function (context) {
 
 // 启动mock
 mock(apiRoutes)
-app.use('/api', apiRoutes)
+app.use(apiRoutes)
+// app.use('/api', apiRoutes)
 
 // handle fallback for HTML5 history API
 app.use(require('connect-history-api-fallback')())

@@ -6,12 +6,25 @@ function getSceneInfo (id) {
     params: {
       sceneId: id
     }
-  }).then(res => {
-    return res
   })
+    .then(res => {
+      return res
+    })
     .catch(err => {
       return err
     })
 }
 
-export { getSceneInfo }
+function proxyWeather () {
+  return axios({
+    url: '/weather'
+  })
+    .then(res => {
+      return res
+    })
+    .catch(err => {
+      return err
+    })
+}
+
+export { getSceneInfo, proxyWeather }

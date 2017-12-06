@@ -12,12 +12,12 @@ import {CT_SHOW_REQUEST} from '@/const/countTimer'
 
 class counterContainer extends React.Component {
   render () {
-    const {onIncrement, onDecrement, onIncrementAsync, onIncrementAsyncOnce} = this.props
+    const {onIncrement, onDecrement, onIncrementAsync, onIncrementAsyncOnce, onProxyWeather} = this.props
     const {onShowCountTimer} = this.props
     let {counter, countTimer} = this.props
     return (
       <div>
-        <Counter {...{onIncrement, onDecrement, onIncrementAsync, onIncrementAsyncOnce, counter}} />
+        <Counter {...{onIncrement, onDecrement, onIncrementAsync, onIncrementAsyncOnce, counter, onProxyWeather}} />
         <button onClick={onShowCountTimer}>点击显示</button>
         <CountTimer show={countTimer.show} />
       </div>
@@ -59,6 +59,11 @@ const mapDispatchToProps = (dispatch) => {
     onShowCountTimer () {
       dispatch({
         type: CT_SHOW_REQUEST
+      })
+    },
+    onProxyWeather () {
+      dispatch({
+        type: 'GET_WEATHER_PROXY'
       })
     }
   }

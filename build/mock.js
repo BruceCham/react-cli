@@ -1,5 +1,5 @@
 function Mock(app){
-  app.get('/getSceneInfo',function(req,res){
+  app.get('/api/getSceneInfo',function(req,res){
     let sceneId = req.query.sceneId
     res.json({
       status: 0,

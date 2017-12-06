@@ -41,11 +41,21 @@ function * setCountTimerShowRequestSaga () {
   yield takeLatest(CT_SHOW_REQUEST, setCountTimerShowRequest)
 }
 
+function * getProxyWeather () {
+  let Promise = yield API.proxyWeather()
+  console.log(Promise)
+}
+
+function * getProxyWeatherSaga () {
+  yield takeLatest('GET_WEATHER_PROXY', getProxyWeather)
+}
+
 export default function * rootSaga () {
   yield all([
     helloSaga(),
     watchIncrementAsyncSaga(),
     watchIncrementAsyncOnceSaga(),
-    setCountTimerShowRequestSaga()
+    setCountTimerShowRequestSaga(),
+    getProxyWeatherSaga()
   ])
 }
