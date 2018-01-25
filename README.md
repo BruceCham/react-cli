@@ -1,5 +1,5 @@
 # React实战骨架 
-> 2017/12/18 已更新！  
+> 2018/01/25 已更新！  
 > 持续更新中，保持依赖包版本最新 🇨🇳
 <div align="center">
   <a href='https://facebook.github.io/react/'>
