@@ -26,7 +26,7 @@ const render = Component => {
     document.getElementById('app')
   )
 }
-
+console.log('当前环境', __ENV__)
 render(routers)
 
 // 热替换代码
