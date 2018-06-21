@@ -10,8 +10,8 @@
     "build": "node build/build.js",
     "build:qa": "node build/build.js",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "eslint": "eslint --ext .js src",
-    "fix": "eslint --ext .js src  --fix"
+    "eslint": "./node_modules/eslint/bin/eslint.js --ext .js src",
+    "fix": "./node_modules/eslint/bin/eslint.js --ext .js src  --fix"
   },
   "precommit": [
     "precommit-msg",

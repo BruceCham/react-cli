@@ -37,7 +37,7 @@ module.exports = {
       }
     },
     // 是否开启 css Module
-    cssModules: false,
+    cssModules: true,
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
