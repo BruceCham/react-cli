@@ -2,7 +2,6 @@ const path = require('path')
 const paths = require('./paths')
 const CircularDependencyPlugin = require('circular-dependency-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const pxtorem = require('postcss-pxtorem')
 
 module.exports = {
   entry: {
@@ -31,124 +30,13 @@ module.exports = {
         include: paths.PATH_SRC,
       },
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '../',
-            }
-          },
-          'css-loader'
-        ],
-        include: [
-          path.join(paths.PATH_NODE_MODULES, 'normalize.css'),
-        ],
-      },
-      {
-        test: /\.less$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '../',
-            }
-          },
-          'css-loader',
-          'postcss-loader',
-          `less-loader?{"sourceMap":true,"javascriptEnabled":true}`
-        ],
-        include: paths.PATH_NODE_MODULES,
-      },
-      {
-        test: /\.styl$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '../',
-            }
-          },
-          'css-loader',
-          'postcss-loader',
-          'stylus-loader'
-        ],
-        include: [
-          path.resolve(paths.PATH_SRC, 'common'),
-        ],
-      },
-      {
-        test: /\.styl/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: { importLoaders: 1 },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-              plugins: [
-                pxtorem({
-                  rootValue: 100,
-                  unitPrecision: 5,
-                  mediaQuery: false,
-                  minPixelValue: 0,
-                  propList: [
-                    '*background*', '*padding*', '*margin*',
-                    'letter-spacing', '*width',
-                    'left', 'right', 'top', 'bottom',
-                  ],
-                }),
-              ],
-            },
-          },
-          {
-            loader: 'stylus-loader',
-            options: {
-              paths: [path.join(paths.PATH_NODE_MODULES, 'src')],
-            }
-          },
-        ],
-        include: [
-          path.join(paths.PATH_NODE_MODULES),
-        ],
-      },
-      {
-        test: /\.styl/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: { importLoaders: 1 },
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true,
-            },
-          },
-          {
-            loader: 'stylus-loader',
-            options: {
-              paths: [
-                path.join(paths.PATH_NODE_MODULES, 'src'),
-              ],
-            },
-          },
-        ],
-        include: [
-          path.join(paths.PATH_NODE_MODULES, 'src'),
-        ],
-      },
-      {
         test: /\.jsx?$/,
         use: 'babel-loader',
         exclude: /node_modules/,
       },
+     
       {
-        test: /\.ts?$/,
+        test: /\.(ts|tsx)?$/,
         use: 'ts-loader',
         include: [
           paths.PATH_SRC,
@@ -161,7 +49,7 @@ module.exports = {
           'url-loader?limit=10000&name=img/[name]-[sha512:hash:base64:7].[ext]',
         ],
         include: [
-          paths.PATH_SRC
+          paths.PATH_SRC,
         ],
       },
     ],
@@ -192,7 +80,6 @@ module.exports = {
       'node_modules',
     ],
     alias: {
-      
     },
   },
 }

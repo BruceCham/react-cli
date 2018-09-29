@@ -2,7 +2,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const ApiMocker = require('webpack-api-mocker2')
 
 const paths = require('./paths')
@@ -18,18 +18,25 @@ module.exports = merge(baseConfig, {
       {
         test: /\.styl$/,
         use: [
-          // MiniCssExtractPlugin.loader,
           'style-loader',
-          'css-loader?modules&localIdentName=[name]--[local]--[hash:base64:7]',
+          {
+            loader: 'typings-for-css-modules-loader',
+            options: {
+              modules: true,
+              namedExport: true,
+              camelCase: true,
+              localIdentName: '[name]_[local]_[hash:base64:5]'
+            }
+          },
           'postcss-loader',
           'stylus-loader'
         ],
         include: paths.PATH_SRC,
-        exclude: path.resolve(paths.PATH_SRC, 'common'),
       },
     ],
   },
   plugins: [
+    new webpack.WatchIgnorePlugin([/css\.d\.ts$/]),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       inject: true,
@@ -64,7 +71,8 @@ module.exports = merge(baseConfig, {
     contentBase: paths.PATH_DIST,
     inline: true,
     hot: true,
-    host: '0.0.0.0',
+    open: true,
+    // host: '0.0.0.0',
     disableHostCheck: true,
     progress: true,
     historyApiFallback: true,

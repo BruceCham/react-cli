@@ -1,21 +1,21 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 
-class Counter extends Component {
-  constructor(props) {
-    super(props)
-    this.clickHandle = this.clickHandle.bind(this)
-  }
+export interface CounterCheckProps {
+  counter: number,
+  onDecrement: (event: any) => void,
+  onIncrement: (event: any) => void,
+  onIncrementAsync: (event: any) => void,
+  onIncrementAsyncOnce: (event: any) => void,
+  onProxyWeather: (event: any) => void, 
+}
 
-  clickHandle() {
-    const { onIncrement } = this.props
-    console.log('没毛病')
-    onIncrement()
-  }
+class Counter extends React.Component<CounterCheckProps, {}> {
 
   render() {
     console.log('render count component')
     const {
       counter,
+      onIncrement,
       onDecrement,
       onIncrementAsync,
       onIncrementAsyncOnce,
@@ -23,7 +23,7 @@ class Counter extends Component {
     } = this.props
     return (
       <div>
-        <button onClick={this.clickHandle}>
+        <button onClick={onIncrement}>
               Increment
         </button>
         {' '}

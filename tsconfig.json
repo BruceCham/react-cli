@@ -1,34 +1,30 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "module": "commonjs",
+    "target": "ES2015",
+    "module": "commonjs", 
+    "outDir": "./lib", // 输出到指定目录
+    "strict": true, // 输出严格模式
+    "noImplicitThis": false, //this: any 不报错 
+    "declaration": true, // 生成相应的d.ts文件
+    "removeComments": true, // 删除所有注释 
+    "moduleResolution": "node",
     "experimentalDecorators": true,
-    "target": "es5", // 将ts编译成什么规范
     "jsx": "react",
-    // "declaration": true,
-    "allowJs": true, // 是否允许js语法在ts中
-    "rootDirs": [ // 设置项目的目录
-      "src",
-      "../question-utils/src",
-      "../question-type/src",
-    ],
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true, // 禁止null undefined赋值给其他类(number.)
     "lib": [
       "dom",
-      "es6",
-      "dom.iterable",
-      "scripthost"
+      "es7"
     ],
-    "baseUrl": "."
   },
-  "include": [
-    "src/**/*.ts", // 编译包含哪些文件
-    "src/**/*.tsx",
-    "../question-utils/src",
-    "../question-type/src"
-  ],
-  "exclude": [ // 编译除去哪些文件
+  "exclude": [
     "node_modules",
-    "lib",
-    "tests"
+    "lib"
+  ],
+  "include":[
+    "src/**/*.ts",
+    "src/**/*.tsx",
   ]
 }
