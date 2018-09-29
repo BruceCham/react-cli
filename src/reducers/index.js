@@ -15,5 +15,5 @@ import countTimer from './countTimer'
 export default combineReducers({
   counter,
   countTimer,
-  form
+  form,
 })

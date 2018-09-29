@@ -1,20 +1,26 @@
 import React, { Component } from 'react'
-import pureRender from 'pure-render-decorator'
 
-@pureRender
 class Counter extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.clickHandle = this.clickHandle.bind(this)
   }
-  clickHandle () {
-    let { onIncrement } = this.props
+
+  clickHandle() {
+    const { onIncrement } = this.props
     console.log('没毛病')
     onIncrement()
   }
-  render () {
+
+  render() {
     console.log('render count component')
-    let { counter, onDecrement, onIncrementAsync, onIncrementAsyncOnce, onProxyWeather } = this.props
+    const {
+      counter,
+      onDecrement,
+      onIncrementAsync,
+      onIncrementAsyncOnce,
+      onProxyWeather,
+    } = this.props
     return (
       <div>
         <button onClick={this.clickHandle}>
@@ -32,9 +38,9 @@ class Counter extends Component {
         <button onClick={onIncrementAsyncOnce}>
               IncrementAsyncOnce
         </button>
-        <button onClick={onProxyWeather}>调用天气接口测试代理功能</button>
+        <button onClick={onProxyWeather}>代理方式获取iKcamp信息</button>
         <hr />
-        <div>Clicked: <span style={{fontSize: '20px', color: 'red'}}> {counter} </span>times</div>
+        <div>Clicked: <span style={{ fontSize: '20px', color: 'red' }}> {counter} </span>times</div>
       </div>
     )
   }

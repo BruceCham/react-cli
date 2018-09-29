@@ -1,5 +1,5 @@
 # React实战骨架 
-> 2018/01/25 已更新！  
+> 2018/09/29 已更新！  
 > 持续更新中，保持依赖包版本最新 🇨🇳
 <div align="center">
   <a href='https://facebook.github.io/react/'>
@@ -27,10 +27,11 @@
 * React-redux 5.0.6
 * React-router-dom 4.2.2 
 * Redux-saga 0.16.0
-* Webpack 3.10.0
+* Webpack 4.16.2
 * Babel-ESlint + Pre-ommit
 * Axios 0.17.1
 * ES6 + Babel
+* TypeScript 3.0.3
 *** 
 
 <br>
@@ -46,7 +47,6 @@
 * vendor-trunk 拆分打包  
 * Axios 网络请求（内有 fetch，可自行切换）
 * Mock 数据API接口
-* Css Modules `config/index.js cssModule:false` 默认关闭(建议团队规范化命名)  
 * ESlint `git` 提交时候，语法规则自动校验  
 * 动态路由  
 
@@ -55,6 +55,8 @@
 <br>
 
 ## <a name="features">&sect; 更新内容</a>  
+- 2018/09/29 增加 typescript 3+ 
+- 2018/09/28 升级 webpack 4+ 
 - 2017/12/06 增加代理接口配置实例 
 - 2017/11/20 
   - 支持提案中的 `ES7 对象展开运算符 ...{}` 
@@ -93,33 +95,17 @@
 
 <br>
 
-## <a name="features">&sect;  构建开发环境</a>
-> 基于 [vue-cli](https://github.com/vuejs/vue-cli) 构建修改
-
-<br>
-
-## <a name="features">&sect;  precommit</a>
-> 基于 `babel-eslint` 语法校验  
-
-自动校验
-```js
-git commit -m '提交信息'
-```  
-手动启动校验  
-```
-npm run eslint
-```
-手动修复不符合规则代码
-```
-npm run fix
-```
+## <a name="features">&sect; 环境配置</a>
+* runtime: Node 开发环境
+* 开发工具: VSCode
 
 <br>
 
 ## <a name="reference">&sect; 参考资料</a>
 * [redux-saga中文站点](http://leonshi.com/redux-saga-in-chinese/docs/introduction/BeginnerTutorial.html)
 * [react-redux](https://github.com/vue-china/react-redux-starter-kit)
-
+* [TypeScript](https://www.tslang.cn/docs/handbook/basic-types.html)
+* [Webpack 4](https://webpack.js.org/concepts/)
 <br>
 
 ## <a name="architecture">&sect; 项目架构</a>
@@ -138,9 +124,7 @@ npm run fix
 │   ├─ saga/            # 路由视图基页（VIEW）
 │   ├─ server/          # 网络请求提取
 │   ├─ utils/           # 公用方法封装提取
-│   ├─ entry.js         # 主入口文件
-├── static/             # 放置无需经由 Webpack 处理的静态文件
-├── test/               # vue-cli产出的测试目录，暂时没有处理，待更
+│   ├─ index.js         # 主入口文件
 ├── index.html          # 静态模板页面，开发和build产出，都依赖它
 ├── .babelrc            # Babel 转码配置
 ├── .eslintignore       # ESLint 检查中需忽略的文件（夹）
@@ -156,15 +140,17 @@ npm run fix
 项目下载
 ```
 git clone https://github.com/brucecham/react-cli.git
-cd react-cli && yarn
+cd react-cli
+git checkout release/webpack4
+npm i
 ```
 启动开发环境
 ```
-yarn start
+npm run start
 ```
 构建生产环境代码
 ```
-yarn build
+npm run build
 ```
 
 <br>

@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+      "baseUrl": "./src",  // all paths are relative to the baseUrl
+      "experimentalDecorators": true,
+      "jsx": "react"
+  }
+}

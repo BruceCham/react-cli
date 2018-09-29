@@ -1,6 +1,34 @@
 {
   "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
     "experimentalDecorators": true,
-    "allowJs": true
-  }
+    "target": "es5", // 将ts编译成什么规范
+    "jsx": "react",
+    // "declaration": true,
+    "allowJs": true, // 是否允许js语法在ts中
+    "rootDirs": [ // 设置项目的目录
+      "src",
+      "../question-utils/src",
+      "../question-type/src",
+    ],
+    "lib": [
+      "dom",
+      "es6",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "baseUrl": "."
+  },
+  "include": [
+    "src/**/*.ts", // 编译包含哪些文件
+    "src/**/*.tsx",
+    "../question-utils/src",
+    "../question-type/src"
+  ],
+  "exclude": [ // 编译除去哪些文件
+    "node_modules",
+    "lib",
+    "tests"
+  ]
 }

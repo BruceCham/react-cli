@@ -1,61 +1,70 @@
 import { delay } from 'redux-saga'
-import { put, takeEvery, takeLatest, all } from 'redux-saga/effects'
-import * as API from '@/server'
+import {
+  put,
+  takeEvery,
+  takeLatest,
+  all,
+} from 'redux-saga/effects'
+import * as API from 'server'
 import {
   INCREMENT,
   INCREMENT_ASYNC,
-  INCREMENT_ASYNC_ONCE
-} from '@/const/actions'
-import {CT_SHOW, CT_HIDE, CT_SHOW_REQUEST} from '@/const/countTimer'
+  INCREMENT_ASYNC_ONCE,
+} from 'const/actions'
+import {
+  CT_SHOW,
+  CT_HIDE,
+  CT_SHOW_REQUEST,
+} from 'const/countTimer'
 
-export function * incrementAsync () {
+export function* incrementAsync() {
   yield delay(1000)
   yield put({ type: INCREMENT })
   let Promise = yield API.getSceneInfo(123)
   console.log(Promise)
 }
 
-function * watchIncrementAsyncSaga () {
+function* watchIncrementAsyncSaga() {
   yield takeEvery(INCREMENT_ASYNC, incrementAsync)
 }
 
-function * watchIncrementAsyncOnceSaga () {
+function* watchIncrementAsyncOnceSaga() {
   yield takeLatest(INCREMENT_ASYNC_ONCE, incrementAsync)
 }
 
-function * helloSaga () {
-  console.log('hello saga')
+function* helloSaga() {
+  yield console.log('hello saga')
 }
 
-function * setCountTimerShowRequest () {
+function* setCountTimerShowRequest() {
   yield put({
-    type: CT_SHOW
+    type: CT_SHOW,
   })
   yield delay(5000)
   yield put({
-    type: CT_HIDE
+    type: CT_HIDE,
   })
 }
 
-function * setCountTimerShowRequestSaga () {
+function* setCountTimerShowRequestSaga() {
   yield takeLatest(CT_SHOW_REQUEST, setCountTimerShowRequest)
 }
 
-function * getProxyWeather () {
-  let Promise = yield API.proxyWeather()
+function* getProxyGithubApi(action) {
+  let Promise = yield API.proxyGithubApi()
   console.log(Promise)
 }
 
-function * getProxyWeatherSaga () {
-  yield takeLatest('GET_WEATHER_PROXY', getProxyWeather)
+function* getProxyGithubApiSaga() {
+  yield takeLatest('GET_WEATHER_PROXY', getProxyGithubApi)
 }
 
-export default function * rootSaga () {
+export default function* rootSaga() {
   yield all([
     helloSaga(),
     watchIncrementAsyncSaga(),
     watchIncrementAsyncOnceSaga(),
     setCountTimerShowRequestSaga(),
-    getProxyWeatherSaga()
+    getProxyGithubApiSaga(),
   ])
 }

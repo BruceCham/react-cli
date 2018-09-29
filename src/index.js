@@ -1,32 +1,31 @@
+import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import { AppContainer } from 'react-hot-loader'
-
-import rootSaga from '@/saga'
-import reducer from '@/reducers'
-import routers from '@/routers'
+import 'common/reset.styl'
+import rootSaga from 'saga'
+import reducer from 'reducers'
+import routers from 'routers'
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(
   reducer,
-  applyMiddleware(sagaMiddleware)
+  applyMiddleware(sagaMiddleware),
 )
-let sagaTask = sagaMiddleware.run(function * () {
+let sagaTask = sagaMiddleware.run(function* rootSagaFn() {
   yield rootSaga()
 })
 
-const render = Component => {
-  ReactDOM.render(
-    <AppContainer key={Math.random()}>
-      <Provider store={store}>{Component}</Provider>
-    </AppContainer>,
-    document.getElementById('app')
-  )
-}
-console.log('当前环境', __ENV__)
+const render = Component => ReactDOM.render(
+  <AppContainer key={Math.random()}>
+    <Provider store={store}>{Component}</Provider>
+  </AppContainer>,
+  document.getElementById('app'),
+)
+
 render(routers)
 
 // 热替换代码
@@ -36,14 +35,14 @@ if (module.hot) {
     render(nextRoutes)
   })
   module.hot.accept('./reducers', () => {
-    const nextRootReducer = require('./reducers/index').default
+    const nextRootReducer = require('./reducers').default
     store.replaceReducer(nextRootReducer)
   })
   module.hot.accept('./saga', () => {
     const nextRootSaga = require('./saga').default
     sagaTask.cancel()
     sagaTask.done.then(() => {
-      sagaTask = sagaMiddleware.run(function * replacedSaga (action) {
+      sagaTask = sagaMiddleware.run(function* replacedSaga() {
         yield nextRootSaga()
       })
     })

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { SubmissionError } from 'redux-form'
-import SimpleForm from '@/components/SimpleForm'
+import SimpleForm from 'components/SimpleForm'
 class FormContainer extends React.Component {
   render () {
     const { onSubmit } = this.props

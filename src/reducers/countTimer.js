@@ -1,12 +1,16 @@
 const STATE = {
-  show: false
+  show: false,
 }
-export default function countTimer (state = STATE, action) {
+export default function countTimer(state = STATE, action) {
   switch (action.type) {
     case 'CT_SHOW':
-      return Object.assign({}, state, {show: true})
+      return Object.assign({}, state, {
+        show: true,
+      })
     case 'CT_HIDE':
-      return Object.assign({}, state, {show: false})
+      return Object.assign({}, state, {
+        show: false,
+      })
     default:
       return state
   }

@@ -1,11 +1,16 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import classNames from 'classnames/bind'
-import styles from './index.css'
+import styles from './index.styl'
 
-let cx = classNames.bind(styles)
+const cx = classNames.bind(styles)
 
-const renderField = ({ input, label, type, meta: { touched, error } }) => (
+const renderField = ({
+  input,
+  label,
+  type,
+  meta: { touched, error },
+}) => (
   <div>
     <label>{label}</label>
     <div>
@@ -16,8 +21,15 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
 )
 
 class SimpleForm extends React.Component {
-  render () {
-    const { error, handleSubmit, pristine, reset, submitting, onSubmit } = this.props
+  render() {
+    const {
+      error,
+      handleSubmit,
+      pristine,
+      reset,
+      submitting,
+      onSubmit,
+    } = this.props
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
         <Field
@@ -43,5 +55,5 @@ class SimpleForm extends React.Component {
 }
 
 export default reduxForm({
-  form: 'submitValidation'
+  form: 'submitValidation',
 })(SimpleForm)

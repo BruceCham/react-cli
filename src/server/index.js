@@ -1,30 +1,18 @@
-import { axios } from '@/utils'
+import { axios } from 'utils'
 
-function getSceneInfo (id) {
+function getSceneInfo(id) {
   return axios({
-    url: '/api/getSceneInfo',
+    url: '/webapi/assignment/stu/paper',
     params: {
-      sceneId: id
-    }
-  })
-    .then(res => {
-      return res
-    })
-    .catch(err => {
-      return err
-    })
+      sceneId: id,
+    },
+  }).then(res => res).catch(err => err)
 }
 
-function proxyWeather () {
+function proxyGithubApi() {
   return axios({
-    url: '/weather'
-  })
-    .then(res => {
-      return res
-    })
-    .catch(err => {
-      return err
-    })
+    url: '/webapi/github/users/ikcamp',
+  }).then(res => res).catch(err => err)
 }
 
-export { getSceneInfo, proxyWeather }
+export { getSceneInfo, proxyGithubApi }

@@ -8,5 +8,5 @@ export {
   CT_HIDE,
   CT_HIDE_REQUEST,
   CT_SHOW,
-  CT_SHOW_REQUEST
+  CT_SHOW_REQUEST,
 }
