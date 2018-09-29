@@ -1,6 +1,8 @@
 # React实战骨架 
+> 🎨  基于Vue Cli构建改版的react全家桶实战骨架 🌟  
+> 持续更新中，保持依赖包版本最新 🇨🇳  
 > 2018/01/25 已更新！  
-> 持续更新中，保持依赖包版本最新 🇨🇳
+
 <div align="center">
   <a href='https://facebook.github.io/react/'>
     <img src='./images/react.png' alt='react Logo Landscape' width='80'/>
