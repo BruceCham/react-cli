@@ -10,7 +10,7 @@ class App extends React.Component {
       <div className={cx('app-p-box')}>
         <h1>React Router Saga :)</h1>
         <div>
-          <Link to='/home' replace>首页</Link>
+          <Link to='/' replace>首页</Link>
           {' '}
           <NavLink to='/counter' replace activeClassName='selected' activeStyle={{ color: 'red' }}>计数页面</NavLink>
           {' '}

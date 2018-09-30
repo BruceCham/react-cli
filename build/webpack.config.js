@@ -33,6 +33,11 @@ module.exports = merge(baseConfig, {
         ],
         include: paths.PATH_SRC,
       },
+      {
+        test: /\.(ts|tsx)?$/,
+        enforce: 'pre',
+        loader: 'tslint-loader'
+      }
     ],
   },
   plugins: [

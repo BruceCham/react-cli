@@ -1,4 +1,4 @@
-export default function (url, options) {
+export default function (url: string, options: object) {
   const $options = Object.assign({}, options, { credentials: 'include' })
   return fetch(url, $options).then((response) => {
     const contentType = response.headers.get('content-type')

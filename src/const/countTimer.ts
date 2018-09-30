@@ -4,7 +4,7 @@ const CT_SHOW_REQUEST = 'CT_SHOW_REQUEST'
 const CT_HIDE = 'CT_HIDE'
 const CT_HIDE_REQUEST = 'CT_HIDE_REQUEST'
 
-export {
+export default {
   CT_HIDE,
   CT_HIDE_REQUEST,
   CT_SHOW,

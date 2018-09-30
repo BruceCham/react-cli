@@ -1,7 +1,7 @@
 import axios from './axios'
-import Bundle from './bundle'
+import fetch from './fetch'
 
 export {
+  fetch,
   axios,
-  Bundle,
 }

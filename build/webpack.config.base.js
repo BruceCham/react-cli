@@ -74,12 +74,10 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
     modules: [
       path.resolve(paths.PATH_SRC),
       'node_modules',
     ],
-    alias: {
-    },
   },
 }
