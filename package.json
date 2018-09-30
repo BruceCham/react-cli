@@ -2,7 +2,7 @@
   "name": "react-cli",
   "version": "1.0.0",
   "description": "react webpack4 ts",
-  "main": "index.js",
+  "main": "src/index",
   "scripts": {
     "test": "npm run test",
     "start": "webpack-dev-server --config ./build/webpack.config.js -w --colors --display-error-details",
