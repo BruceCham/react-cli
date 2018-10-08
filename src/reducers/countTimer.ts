@@ -1,7 +1,7 @@
 const STATE = {
   show: false,
 }
-export default function countTimer(state = STATE, action) {
+export default function countTimer(state = STATE, action: {type: string}) {
   switch (action.type) {
     case 'CT_SHOW':
       return Object.assign({}, state, {

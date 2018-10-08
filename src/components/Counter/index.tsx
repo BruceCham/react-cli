@@ -1,18 +1,17 @@
 import * as React from 'react'
 
-export interface CounterCheckProps {
+interface CounterCheckProps {
   counter: number,
   onDecrement: (event: any) => void,
   onIncrement: (event: any) => void,
   onIncrementAsync: (event: any) => void,
   onIncrementAsyncOnce: (event: any) => void,
-  onProxyWeather: (event: any) => void, 
+  onProxyWeather: (event: any) => void,
 }
 
 class Counter extends React.Component<CounterCheckProps, {}> {
 
   render() {
-    console.log('render count component')
     const {
       counter,
       onIncrement,

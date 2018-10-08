@@ -1,10 +1,12 @@
-import {
-  INCREMENT,
-  INCREMENT_IF_ODD,
-  DECREMENT,
-} from 'const/actions'
+import ACTIONS from 'const/actions'
 
-export default function counter(state = 0, action) {
+const {
+  INCREMENT,
+  DECREMENT,
+  INCREMENT_IF_ODD,
+} = ACTIONS
+
+export default function counter(state = 0, action: {type: string}) {
   switch (action.type) {
     case INCREMENT:
       return state + 1

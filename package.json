@@ -5,6 +5,7 @@
   "main": "src/index",
   "scripts": {
     "test": "npm run test",
+    "dev": "npm run start",
     "start": "webpack-dev-server --config ./build/webpack.config.js -w --colors --display-error-details",
     "build": "NODE_ENV=production webpack --config ./build/webpack.config.prod.js --progress --colors --display-error-details",
     "serve": "cd server && npm run dev"
@@ -92,6 +93,7 @@
     "@types/classnames": "^2.2.6",
     "@types/prop-types": "^15.5.5",
     "@types/react": "^16.4.14",
+    "@types/react-redux": "^6.0.9",
     "@types/react-router-dom": "^4.3.1",
     "awesome-typescript-loader": "^5.2.1",
     "axios": "^0.18.0",

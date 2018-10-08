@@ -18,16 +18,33 @@ type State = Readonly<typeof initialState>
 
 class CountTimer extends React.Component<CountTimerCheckProps, State> {
 
-  timer:any = undefined
-
   static readonly defaultProps: CountTimerCheckProps = {
     show: false,
     time: 5,
   }
 
+  timer: any = undefined
+
   readonly state: State = initialState
 
-  private setIntervalTime() {
+  componentWillReceiveProps(nextProps: CountTimerCheckProps) {
+    const { show, time = 5 } = nextProps
+    this.setState({
+      show,
+      time,
+    })
+    if (show) { // 开始
+      this.setIntervalTime()
+    } else {
+      this.clearIntervalTime()
+    }
+  }
+
+  componentWillUnmount() {
+    this.clearIntervalTime()
+  }
+
+  setIntervalTime() {
     if (this.timer !== undefined) {
       return
     }
@@ -45,26 +62,9 @@ class CountTimer extends React.Component<CountTimerCheckProps, State> {
     }, 1000)
   }
 
-  private clearIntervalTime() {
+  clearIntervalTime() {
     clearInterval(this.timer)
     this.timer = undefined
-  }
-
-  componentWillReceiveProps(nextProps: CountTimerCheckProps) {
-    const { show, time = 5 } = nextProps
-    this.setState({
-      show,
-      time,
-    })
-    if (show) { // 开始
-      this.setIntervalTime()
-    } else {
-      this.clearIntervalTime()
-    }
-  }
-
-  componentWillUnmount() {
-    this.clearIntervalTime()
   }
 
   preveentHandle = (evt: React.MouseEvent<HTMLElement>) => {

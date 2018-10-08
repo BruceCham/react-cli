@@ -1,16 +1,33 @@
-import React from 'react'
+import * as React from 'react'
 import { connect } from 'react-redux'
 import Counter from 'components/Counter'
 import CountTimer from 'components/CountTimer'
-import {
+import ACTIONS from 'const/actions'
+import COUNTTIMER from 'const/countTimer'
+
+const {
   INCREMENT,
   DECREMENT,
   INCREMENT_ASYNC,
   INCREMENT_ASYNC_ONCE,
-} from 'const/actions'
-import { CT_SHOW_REQUEST } from 'const/countTimer'
+} = ACTIONS
+const { CT_SHOW_REQUEST } = COUNTTIMER
 
-class counterContainer extends React.Component {
+type CountTimerObj = {
+  show: boolean,
+}
+export interface CounterContainerCheckProps {
+  onDecrement: (event: any) => void,
+  onIncrement: (event: any) => void,
+  onIncrementAsync: (event: any) => void,
+  onIncrementAsyncOnce: (event: any) => void,
+  onProxyWeather: (event: any) => void,
+  onShowCountTimer: () => void,
+  counter: number,
+  countTimer: CountTimerObj,
+}
+
+class CounterContainer extends React.Component<CounterContainerCheckProps, {}> {
   render() {
     const {
       onIncrement,
@@ -18,9 +35,10 @@ class counterContainer extends React.Component {
       onIncrementAsync,
       onIncrementAsyncOnce,
       onProxyWeather,
+      onShowCountTimer,
+      counter,
+      countTimer,
     } = this.props
-    const { onShowCountTimer } = this.props
-    const { counter, countTimer } = this.props
     return (
       <div>
         <Counter {...{
@@ -32,13 +50,16 @@ class counterContainer extends React.Component {
     )
   }
 }
-
-const mapStateToProps = state => ({
+type StateProps = {
+  counter: number,
+  countTimer: object,
+}
+const mapStateToProps = (state: StateProps) => ({
   counter: state.counter,
   countTimer: state.countTimer,
 })
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: Function) => ({
   onIncrement() {
     dispatch({
       type: INCREMENT,
@@ -62,6 +83,7 @@ const mapDispatchToProps = dispatch => ({
     })
   },
   onShowCountTimer() {
+    console.log('onShowCountTimer 执行任务')
     dispatch({
       type: CT_SHOW_REQUEST,
     })
@@ -73,4 +95,4 @@ const mapDispatchToProps = dispatch => ({
   },
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(counterContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(CounterContainer as any)

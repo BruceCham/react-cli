@@ -5,17 +5,20 @@ import {
   takeLatest,
   all,
 } from 'redux-saga/effects'
-import * as API from 'server'
-import {
+import API from 'server'
+import ACTIONS from 'const/actions'
+import COUNTTIMER from 'const/countTimer'
+
+const {
   INCREMENT,
   INCREMENT_ASYNC,
   INCREMENT_ASYNC_ONCE,
-} from 'const/actions'
-import {
+} = ACTIONS
+const {
   CT_SHOW,
   CT_HIDE,
   CT_SHOW_REQUEST,
-} from 'const/countTimer'
+} = COUNTTIMER
 
 export function* incrementAsync() {
   yield delay(1000)
@@ -50,7 +53,7 @@ function* setCountTimerShowRequestSaga() {
   yield takeLatest(CT_SHOW_REQUEST, setCountTimerShowRequest)
 }
 
-function* getProxyGithubApi(action) {
+function* getProxyGithubApi() {
   let Promise = yield API.proxyGithubApi()
   console.log(Promise)
 }

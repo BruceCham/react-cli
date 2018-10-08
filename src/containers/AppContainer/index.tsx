@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import App from 'components/App'
 
@@ -12,4 +11,4 @@ class AppContainer extends React.Component {
   }
 }
 
-export default withRouter(connect()(AppContainer))
+export default connect()(AppContainer)
