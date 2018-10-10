@@ -14,6 +14,7 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
+    "strictFunctionTypes": true,
     "strictNullChecks": true, // 禁止null undefined赋值给其他类(number.)
     "lib": [
       "dom",
