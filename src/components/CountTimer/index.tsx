@@ -25,7 +25,7 @@ class CountTimer extends React.Component<CountTimerCheckProps, State> {
 
   timer: any = undefined
 
-  readonly state: State = initialState
+  state: State = initialState
 
   componentWillReceiveProps(nextProps: CountTimerCheckProps) {
     const { show, time = 5 } = nextProps
