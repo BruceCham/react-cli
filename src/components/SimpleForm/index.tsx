@@ -41,7 +41,7 @@ class SimpleForm extends React.Component<SimpleFormCheckProps, any > {
     return (
       <div>
         {error && <h3 className={cx('error')}>{error}</h3>}
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} autoComplete="off" autoCapitalize="off" autoCorrect="off">
           <Field
             name='username'
             type='text'
