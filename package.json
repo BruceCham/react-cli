@@ -8,7 +8,8 @@
     "dev": "npm run start",
     "start": "webpack-dev-server --config ./build/webpack.config.js -w --colors --display-error-details",
     "build": "NODE_ENV=production webpack --config ./build/webpack.config.prod.js --progress --colors --display-error-details",
-    "serve": "cd server && npm run dev"
+    "serve": "cd server && npm run dev",
+    "preview": "cd dist && sts"
   },
   "repository": {
     "type": "git"
@@ -77,6 +78,7 @@
     "redux-actions": "^2.0.1",
     "redux-logger": "^3.0.6",
     "rimraf": "^2.6.1",
+    "sts": "^3.0.2",
     "style-loader": "^0.21.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
