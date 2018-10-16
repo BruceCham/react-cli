@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "target": "ES2015",
-    "module": "commonjs", 
+    // "module": "commonjs", 
+    "module": "esnext", // 【注意】for react-loadable
     // "outDir": "./lib", // 输出到指定目录
     "strict": true, // 输出严格模式
     "noImplicitThis": false, //this: any 不报错 
@@ -15,6 +16,7 @@
     "noUnusedLocals": true,
     "noImplicitAny": true,
     "strictFunctionTypes": true,
+    "allowSyntheticDefaultImports": true,
     "strictNullChecks": true, // 禁止null undefined赋值给其他类(number.)
     "lib": [
       "dom",

@@ -5,21 +5,22 @@ import {
   // BrowserRouter as Router,
   HashRouter as Router,
 } from 'react-router-dom'
-
-import CounterContainer from 'containers/CounterContainer'
 import AppContainer from 'containers/AppContainer'
-import HomeContainer from 'containers/HomeContainer'
-import NoMatchContainer from 'containers/NoMatchContainer'
-import FormContainer from 'containers/SimpleFormContainer'
+import loadableComponent from './loadableComponent'
+
+const CounterContainer = () => import('containers/CounterContainer')
+const HomeContainer = () => import('containers/HomeContainer')
+const NoMatchContainer = () => import('containers/NoMatchContainer')
+const FormContainer = () => import('containers/SimpleFormContainer')
 
 const routes = (
   <Router>
     <AppContainer>
       <Switch>
-        <Route exact path="/" component={HomeContainer} />
-        <Route path='/counter' component={CounterContainer} />
-        <Route path='/form' component={FormContainer} />
-        <Route component={NoMatchContainer} />
+        <Route exact path="/" component={loadableComponent(HomeContainer)} />
+        <Route path='/counter' component={loadableComponent(CounterContainer)} />
+        <Route path='/form' component={loadableComponent(FormContainer)} />
+        <Route component={loadableComponent(NoMatchContainer)} />
       </Switch>
     </AppContainer>
   </Router>

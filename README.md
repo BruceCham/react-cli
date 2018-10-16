@@ -1,7 +1,7 @@
 # React实战骨架 
 > 🎨  webpack4 + react16 + typescript3 全家桶实战骨架 🌟  
 > 持续更新中，保持依赖包版本最新 🇨🇳  
-> 2018/10/11 已更新！  
+> 2018/10/16 已更新！  
 
 <div align="center">
   <a href='https://facebook.github.io/react/'>
@@ -57,6 +57,7 @@
 <br>
 
 ## <a name="features">&sect; 更新内容</a>  
+- 2018/10/16 ts + react-loadable 实现懒加载 
 - 2018/10/11 修复 redux-form ts 
 - 2018/09/29 增加 typescript 3+ 
 - 2018/09/28 升级 webpack 4+ 
@@ -76,17 +77,17 @@
 - 2017/08/21 
   - 去掉 `babel-presets-stag-2`，统一为 `babel-presets-env`  
 - 2017/07/13 
-  - 增加动态路由功能，用法见 `SimpleFormContainer`  
+  - ~~增加动态路由功能，用法见 `SimpleFormContainer`~~  
 - 2017/07/06 
   - 增加 `antd` 按需加载打包配置(.babelrc)  
 - 2017/06/30 
-  - 修复 `git commit` 提交时候，校验 `es7 decorator` 不通过问题  
+  - ~~修复 `git commit` 提交时候，校验 `es7 decorator` 不通过问题~~  
 - 2017/06/29 
   - 增加 `redux-form` 表单验证组件  
 - 2017/06/22 
   - 升级 `webpack 3.0`，增加 `scope hoisting`  
 - 2017/06/08 
-  - 引用 `pure-render-decorator`，提升渲染性能；增加装饰器 decorator  
+  - ~~引用 `pure-render-decorator`，提升渲染性能；增加装饰器 decorator~~  
 - 2017/05/22 
   - 对提取的 `server` 进行小的优化  
 - 2017/05/16 
