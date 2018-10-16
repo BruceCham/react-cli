@@ -10,7 +10,7 @@ const paths = require('./paths')
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  // devtool: 'source-map',
+  devtool: 'source-map',
   output: {
     path: path.resolve(paths.PATH_DIST),
     filename: 'js/[name]-[hash:7].js',
@@ -35,7 +35,6 @@ module.exports = merge(baseConfig, {
           'stylus-loader'
         ],
         include: paths.PATH_SRC,
-        exclude: path.resolve(paths.PATH_SRC, 'common'),
       },
     ],
   },
@@ -60,7 +59,7 @@ module.exports = merge(baseConfig, {
       new UglifyJSPlugin({
         cache: true,
         parallel: true,
-        // sourceMap: true // set to true if you want JS source maps
+        sourceMap: true, // set to true if you want JS source maps
       }),
       new OptimizeCSSAssetsPlugin({})
     ],
