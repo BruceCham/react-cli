@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        use: 'babel-loader',
+        use: 'babel-loader?cacheDirectory',
         exclude: /node_modules/,
       },
      
@@ -55,17 +55,23 @@ module.exports = {
     ],
   },
   optimization: {
-    // 暂时不需要拆分 vendor chunks
-    // splitChunks: {
-    //   cacheGroups: {
-    //     vendor: {
-    //       test: /[\\/]node_modules[\\/]/,
-    //       chunks: 'all',
-    //       name: 'vendor',
-    //       // enforce: true
-    //     }
-    //   }
-    // },
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          chunks: 'initial',
+          minChunks: 2,
+          maxInitialRequests: 5,
+          minSize: 0,
+        },
+        vendor: { // 将第三方模块提取出来
+          test: /node_modules/,
+          chunks: 'initial',
+          name: 'vendor',
+          priority: 10, // 优先
+          enforce: true,
+        },
+      },
+    },
   },
   plugins: [
     new CircularDependencyPlugin({
@@ -77,7 +83,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     modules: [
       path.resolve(paths.PATH_SRC),
-      'node_modules',
+      path.resolve('node_modules'),
     ],
   },
 }
