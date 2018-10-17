@@ -1,7 +1,7 @@
 # React实战骨架 
 > 🎨  webpack4 + react16 + typescript3 全家桶实战骨架 🌟  
 > 持续更新中，保持依赖包版本最新 🇨🇳  
-> 2018/10/16 已更新！  
+> 2018/10/17 已更新！  
 
 <div align="center">
   <a href='https://facebook.github.io/react/'>
@@ -168,10 +168,10 @@ ncu -a
 <br>
 
 ## <a name="reference">&sect; 启动静态服务器</a>
-> [sts启动静态服务器](https://www.npmjs.com/package/sts)
+> [http-server启动静态服务器](https://www.npmjs.com/package/http-server)
 ```
-yarn build
-cd dist && sts 8090
+npm run build
+npm run preview
 ```
 
 <br>

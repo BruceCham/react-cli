@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --config ./build/webpack.config.js -w --colors --display-error-details",
     "build": "NODE_ENV=production webpack --config ./build/webpack.config.prod.js --progress --colors --display-error-details",
     "serve": "cd server && npm run dev",
-    "preview": "cd dist && sts"
+    "preview": "cd dist && http-server -p 9527 -g -o"
   },
   "repository": {
     "type": "git"
@@ -46,6 +46,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
     "humps": "^2.0.0",
     "isomorphic-fetch": "^2.2.1",
     "js-cookie": "^2.2.0",
@@ -78,7 +79,6 @@
     "redux-actions": "^2.0.1",
     "redux-logger": "^3.0.6",
     "rimraf": "^2.6.1",
-    "sts": "^3.0.2",
     "style-loader": "^0.21.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
