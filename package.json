@@ -113,6 +113,7 @@
     "moment": "^2.17.1",
     "prop-types": "^15.6.2",
     "querystring": "^0.2.0",
+    "raphael": "^2.2.7",
     "rc-progress": "^2.1.1",
     "react": "^16.2.0",
     "react-dnd": "^5.0.0",
