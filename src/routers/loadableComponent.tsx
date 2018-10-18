@@ -1,5 +1,4 @@
 import * as React from 'react'
-// import * as Loadable from 'react-loadable/lib/index'
 // import Loadable from 'react-loadable'
 const Loadable = require('react-loadable')
 const Loading = (props: {error: any}) => {
